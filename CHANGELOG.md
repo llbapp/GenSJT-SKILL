@@ -2,6 +2,89 @@
 
 ---
 
+## V3.5（2026-04-28）
+
+### Sheet3 知识库引用记录增加行业岗位匹配
+
+#### 变更概述
+在 Excel 汇总表 Sheet3「知识库引用记录」中新增两列：行业岗位参考、岗位匹配说明，记录本次命题所使用的行业岗位模糊搜索结果。
+
+#### gensjt.py 变更
+- `create_excel_summary` 中 Sheet3 表头增加「行业岗位参考」和「岗位匹配说明」两列
+- `gen_docs` 执行时自动调用 `search_context()` 获取匹配结果，写入每行数据
+- 岗位匹配说明包含：用户输入、最佳匹配（行业/分类/岗位原型）、匹配分（综合/行业/岗位）、备选匹配
+- `_fuzzy_score` 增加 ngram 中文复合词重叠检测，提升中文短词匹配能力
+
+#### 已知局限
+- 当行业名之间无任何共享字符（如"互联网电商" vs "供应链/物流/采购"），模糊匹配仍会给出低分，这是数据覆盖问题而非算法问题
+- 解决方案：在 `industry_job_context_db.json` 中增加更多行业岗位组合记录
+
+---
+
+## V3.4（2026-04-28）
+
+### 行业岗位模糊搜索
+
+#### 变更概述
+新增 `industry_job_context_db.json` 知识库，在命题前通过模糊搜索匹配用户输入的行业和岗位，为 AI 提供岗位职责、边界、冲突来源、利益相关方、行业术语等上下文信息，显著提升情境真实感。
+
+#### 新增数据文件
+- `industry_job_context_db.json`：行业岗位上下文数据库（42 条记录，8 大行业）
+  - 每条记录包含：`industry`、`position_category`、`position_archetype`、`logic`（典型行为/职责边界/冲突来源/利益相关方）、`exclusive_scenarios`（行业独有情境）、`domain_vocabulary`（专业术语）
+
+#### gensjt.py 变更
+- 新增 `_fuzzy_score(query, target)` 函数：基于 `difflib.SequenceMatcher` 的模糊匹配，支持 `/` 分隔的别名模式（如 "IT/互联网/通信"）
+- 新增 `search_context(industry_query, position_query, top_n=3)` 函数：
+  - 行业和岗位分别模糊匹配，各自返回 Top-N
+  - 综合分 = 行业分 × 0.4 + 岗位分 × 0.6（岗位更关键）
+  - 每条结果附带 `_meta` 元数据（综合分、行业分、岗位分、匹配字段）
+- `query` 命令新增可选参数 `--industry` 和 `--position`，传入后输出 JSON 中增加 `job_context` 字段
+
+#### SKILL.md 变更
+- 阶段二 query 命令：新增 `--industry` 和 `--position` 参数说明
+- 输出 JSON 新增 `job_context` 字段说明（`industry_match`、`position_match`、`results`）
+- Step 4 情境渲染：新增「岗位锚定」步骤，要求 AI 从 `job_context.results` 中提取岗位职责边界、冲突来源、利益相关方、术语等
+
+---
+
+## V3.3（2026-04-28）
+
+### 密码验证前置
+
+#### 变更概述
+将密码验证从"收集参数后验证"改为"最先验证密码，通过后再收集参数"，避免用户填完所有信息后才发现密码错误。
+
+#### gensjt.py 变更
+- 新增 `verify` 命令：`python gensjt.py "$PASSWORD" verify`
+  - 仅验证密码，不触发 GPG 解密
+  - 成功输出 `密码验证通过` 并 exit(0)，失败输出 `密码错误` 并 exit(1)
+
+#### SKILL.md 变更
+- 执行指令拆分为三个阶段：阶段一（密码验证）→ 阶段二（参数收集+知识库检索）→ 阶段三（分批生成）
+- 阶段一明确：AI 加载 Skill 后**立即询问密码**，验证通过后再收集业务参数
+- 连续 3 次密码错误后停止执行
+- 密码验证通过后复用同一密码，无需再次询问
+
+---
+
+## V3.2（2026-04-28）
+
+### 缺失维度跳过机制
+
+#### 变更概述
+当用户输入的维度不在胜任特征辞典中时，从"全部终止"改为"跳过该维度，继续处理其余维度"。
+
+#### gensjt.py 变更
+- `query_refs()` 新增 `skipped_dimensions` 字段，记录未找到的维度名称列表
+- 内部使用 `found_dims` 集合追踪已匹配的维度，遍历输入列表后将未匹配项写入 `skipped_dimensions`
+
+#### SKILL.md 变更
+- Step 1 维度检索：从"若不存在匹配维度，输出'维度不存在'并停止执行"改为"跳过该维度，仅处理存在的维度"
+- query 命令输出说明：新增 `skipped_dimensions` 字段说明
+- AI 行为规则：如果 `skipped_dimensions` 非空，AI 应先告知用户哪些维度被跳过，再对存在的维度命题
+
+---
+
 ## V3.0（2026-04-27）
 
 ### SKILL.md 重构

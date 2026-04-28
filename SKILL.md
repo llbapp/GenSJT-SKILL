@@ -64,7 +64,7 @@ A=3分：该选项体现了全局视野和主动协调能力，能够在复杂�
 
 ### Step 1：维度标准深度内化 (Target Alignment)
 
-1. **检索**：在 `competence_dictionary.json` 中锁定用户输入的【维度】。若不存在匹配维度，输出"维度不存在"并**停止执行**。
+1. **检索**：在 `competence_dictionary.json` 中锁定用户输入的【维度】。若不存在匹配维度，**跳过该维度**，仅处理存在的维度，并在最终输出时告知用户哪些维度被跳过了。如果所有维度都不存在，则停止执行。
 2. **内化**：深度理解该维度的"定义（definition）"、"高分特征（high_score_features）"、"低分特征（low_score_features）"与"行为等级（behavior_levels）"。
 3. **锚定**：将 3 分（最优）选项锁定在"优秀/良好"级行为，将 0 分（最差）选项锁定在"不足"级行为。
 
@@ -76,14 +76,20 @@ A=3分：该选项体现了全局视野和主动协调能力，能够在复杂�
 
 ### Step 3：参考母题与语言风格模仿 (Style Mimicking)
 
-1. **母题提取**：从 `extracted_templates.json` 或 `competence_SJT.json` 中找到与该维度匹配的"抽象情境（abstract_scenario）"和"任务（management_task）"。
-2. **样板参考**：在 `example_questions.json` 中检索同维度或同行业的例题，学习其专业术语的使用、冲突推进的节奏以及专业中性的语言风格。
+1. **母题提取**：从 `competence_SJT.json` 中找到与该维度匹配的"抽象情境（abstract_scenario）"、"任务（management_task）"和行为锚点（behavioral_anchors）。参考该维度下的SJT题目情境和行为锚点，作为出题的第一参考资料。
+2. **样板参考**：在 `example_questions.json` 中检索同维度或同行业的例题，学习其语言风格。
 3. **禁止**：严禁直接抄袭例题内容，参考语言风格。
 
 ### Step 4：情境渲染与选项映射 (Rendering & Mapping)
 
-1. **渲染**：将 Step 3 选定的母题逻辑，穿上【行业】和【岗位】的皮肤。
-2. **映射**：
+1. **岗位锚定**：从 `job_context.results` 中提取目标岗位的：
+   - `typical_work_actions`：确保情境中的行为在该岗位的职责范围内（参考 `role_boundary`）
+   - `conflict_source`：核心冲突应与该岗位的典型矛盾一致
+   - `stakeholders`：情境中的其他角色应是该岗位真实的利益相关方
+   - `domain_vocabulary`：情境中应自然使用行业专业术语
+   - `exclusive_scenarios`：参考行业独有情境的逻辑深度和复杂度
+2. **情境渲染**：将 Step 3 选定的母题逻辑，穿上【行业】和【岗位】的皮肤。
+2. **选项映射**：
    - **D选项 (3分)**：对应母题的 `best_practice` 且符合辞典"优秀"描述。
    - **C/B选项 (2/1分)**：对应母题的 `suboptimal_practice`。
    - **A选项 (0分)**：对应母题的 `worst_practice` 且符合辞典"不足"描述。
@@ -135,7 +141,9 @@ A=3分：该选项体现了全局视野和主动协调能力，能够在复杂�
 - ❌ 一个选项包含两个并列行为（如"先A再B，同时还要C"），导致字数超标
 
 #### 选项编写核心原则
+
 在生成每道题目时，必需检查是否符合以下三条核心规则
+
 * **合理性**：选项行为在该情境下可能真实发生，"你"有权限和条件执行
 * **相关性**：行为体现目标维度的相应水平，分值与维度水平严格对应
 * **有效性**：行为在当前情境下有实际效果，效果程度与分值一致
@@ -156,27 +164,65 @@ A=3分：该选项体现了全局视野和主动协调能力，能够在复杂�
 ## 四、 执行流与自动化
 
 ### 执行指令
-#### 1. 密码验证与解密 + 定向知识库检索（合并为一步）
 
-询问密码后，执行以下命令（同时完成解密和按维度检索知识库）：
+**AI 必须严格按照以下两阶段顺序执行：**
+
+#### 阶段一：密码验证（最先执行）
+
+1. **立即询问用户密码**，不等待用户提供其他参数。
+2. 获取密码后，执行验证命令（此时不需要维度参数）：
 
 ```bash
-python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" query --dimensions <维度1>,<维度2>,...
+python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" verify
+```
+
+3. 根据返回结果：
+   - **验证成功**：告知用户"密码验证通过"，然后进入阶段二收集参数。
+   - **验证失败**：告知用户"密码错误，请重新输入"，重新询问密码。**连续 3 次失败后停止执行。**
+
+> **密码验证通过后，密码已在内存中保存，后续 `query` 和 `gen_docs` 命令复用同一密码，无需再次询问。**
+
+#### 阶段二：参数收集 + 定向知识库检索
+
+密码验证通过后，再向用户收集业务参数（行业、岗位、维度、题量、背景信息）。
+
+参数收集完成后，执行以下命令（同时完成解密、维度检索和行业岗位模糊搜索）：
+
+```bash
+python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" query \
+  --dimensions <维度1>,<维度2>,... \
+  --industry <行业> \
+  --position <岗位>
 ```
 
 该命令会：
+
 1. 验证密码并解密参考资料
 2. 按指定维度从所有知识库中**精准检索**相关内容
-3. 输出一个精简的 JSON，包含：
+3. 按用户输入的行业和岗位在 `industry_job_context_db.json` 中**模糊搜索**匹配的行业岗位背景信息
+4. 输出一个精简的 JSON，包含：
    - `dimensions`：目标维度的定义、高低分特征、行为等级
    - `templates`：匹配维度的母题模板（含占位符骨架和逻辑分析）
    - `competence_sjt`：匹配维度的情境-任务-行为锚点
    - `examples`：匹配维度的例题（每维度最多5道，用于语言风格参考）
    - `parameter_guide`：P/D 参数估算指南全文
+   - `skipped_dimensions`：未在知识库中找到的维度名称列表（可能为空）
+   - `job_context`：**行业岗位匹配结果**（可选，传入 --industry 和 --position 时存在）
+     - `industry_match`：行业匹配列表（名称 + 相似度分数）
+     - `position_match`：岗位匹配列表（名称 + 相似度分数）
+     - `results`：综合匹配 Top 3 记录，每条包含完整岗位背景信息：
+       - `logic.typical_work_actions`：典型工作行为
+       - `logic.role_boundary`：职责边界（该做什么 / 不该做什么）
+       - `logic.conflict_source`：核心冲突来源
+       - `logic.stakeholders`：利益相关方
+       - `exclusive_scenarios`：行业独有情境及专业应对逻辑
+       - `domain_vocabulary`：行业专业术语
+       - `_meta`：匹配元数据（综合分、行业分、岗位分）
 
-**AI 必须基于此 JSON 输出进行命题，不得自行读取原始知识库文件。**
+**AI 命题时必须深度参考 `job_context.results` 中的岗位信息，确保情境真实感、角色边界正确、术语地道。** 不得自行读取原始知识库文件。
 
-#### 2. 分批生成逻辑
+#### 阶段三：分批生成逻辑
+
 - 当总题量 > 20题时，必须分批生成，每批不超过 10 题。
 - 每批完成后立即存入 `temp_items.json`，全部批次完成后再统一生成文档。
 - 生成的 JSON 必须包含 `template_id` 以便溯源。
@@ -216,8 +262,7 @@ cd <工作空间路径> && python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$
 python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" gen_docs --output-dir <路径>
 ```
 
-
-## 六、 质量质检清单 
+## 六、 质量质检清单
 
 每道题生成后对以下清单逐条验证
 

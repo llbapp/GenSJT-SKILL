@@ -429,7 +429,8 @@ def create_excel_summary(items: list, dimension_defs: dict, industry: str, posit
                 "胜任特征辞典", "辞典引用说明",
                 "母题模板ID",
                 "胜任-情境对应", "情境对应说明",
-                "例题库参考", "例题参考说明"]
+                "例题库参考", "例题参考说明",
+                "行业岗位参考", "岗位匹配说明"]
 
     ws3.append(headers3)
     for col in range(1, len(headers3) + 1):
@@ -450,6 +451,37 @@ def create_excel_summary(items: list, dimension_defs: dict, industry: str, posit
             dim = item.get("dimension", "未知维度")
             dim_groups[dim].append(item)
         dim_list = list(dim_groups.items())
+
+    # 行业岗位匹配信息（仅计算一次）
+    job_ctx_info = ""
+    if industry and position:
+        ctx = search_context(industry, position, top_n=3)
+        if ctx.get("results"):
+            top_match = ctx["results"][0]
+            meta = top_match.get("_meta", {})
+            matched_ind = top_match.get("industry", "")
+            matched_pos = top_match.get("position_archetype", "")
+            matched_cat = top_match.get("position_category", "")
+            combined_score = meta.get("match_score", 0)
+            ind_score = meta.get("industry_score", 0)
+            pos_score = meta.get("position_score", 0)
+            job_ctx_info = f"✓ 已匹配"
+            job_ctx_detail = (
+                f"用户输入：{industry} / {position}\n"
+                f"最佳匹配：{matched_ind} / {matched_cat} - {matched_pos}\n"
+                f"匹配分：综合 {combined_score}（行业 {ind_score} + 岗位 {pos_score}）"
+            )
+            if len(ctx["results"]) > 1:
+                runners = []
+                for r in ctx["results"][1:]:
+                    rmeta = r.get("_meta", {})
+                    runners.append(
+                        f"{r.get('industry', '')} / {r.get('position_archetype', '')}（{rmeta.get('match_score', 0)}）"
+                    )
+                job_ctx_detail += f"\n备选：{'；'.join(runners)}"
+        else:
+            job_ctx_info = "✗ 未匹配"
+            job_ctx_detail = f"用户输入：{industry} / {position}，未在行业岗位知识库中找到匹配记录"
 
     for dim_idx, (dim_name, dim_items) in enumerate(dim_list, 1):
         # 从知识库自动匹配结果中获取引用信息
@@ -473,6 +505,8 @@ def create_excel_summary(items: list, dimension_defs: dict, industry: str, posit
                 competence_summary,
                 "✓ 已匹配" if examples_found else "✗ 未匹配",
                 examples_summary,
+                job_ctx_info if job_ctx_info else "未提供行业岗位",
+                job_ctx_detail if job_ctx_info else "",
             ]
             ws3.append(row_data)
             for col in range(1, len(headers3) + 1):
@@ -483,7 +517,7 @@ def create_excel_summary(items: list, dimension_defs: dict, industry: str, posit
             row_num3 += 1
 
     # Sheet3 列宽
-    col_widths3 = [8, 14, 12, 45, 20, 14, 45, 12, 45]
+    col_widths3 = [8, 14, 12, 45, 20, 14, 45, 12, 45, 14, 55]
     for i, w in enumerate(col_widths3, 1):
         ws3.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
 
@@ -710,6 +744,174 @@ def _load_dimension_defs(dim_names: list) -> dict:
     return result
 
 
+def _fuzzy_score(query: str, target: str) -> float:
+    """
+    计算两个字符串的模糊相似度（0-1）。
+    使用字符级 SequenceMatcher，并额外处理 '/' 分隔的别名模式和中文复合词重叠。
+    """
+    from difflib import SequenceMatcher
+
+    # 基础相似度
+    base = SequenceMatcher(None, query, target).ratio()
+
+    # 如果 target 包含 '/'（如 "IT/互联网/通信"），逐段匹配取最高分
+    if '/' in target:
+        segments = [s.strip() for s in target.split('/') if s.strip()]
+        seg_scores = []
+        for seg in segments:
+            seg_scores.append(SequenceMatcher(None, query, seg).ratio())
+            # 也检查 query 的子串是否包含在 segment 中
+            if query in seg or seg in query:
+                seg_scores.append(0.95)
+        if seg_scores:
+            base = max(base, max(seg_scores))
+
+    # 同样处理 query 中的 '/' 或常见分隔符
+    for sep in ['/', '、', '，', ',']:
+        if sep in query:
+            parts = [p.strip() for p in query.split(sep) if p.strip()]
+            part_scores = []
+            for part in parts:
+                part_scores.append(SequenceMatcher(None, part, target).ratio())
+                if '/' in target:
+                    for seg in [s.strip() for s in target.split('/') if s.strip()]:
+                        if part in seg or seg in part:
+                            part_scores.append(0.95)
+            if part_scores:
+                base = max(base, max(part_scores) * 0.9)
+
+    # 中文复合词重叠度补充评分
+    # 解决 "互联网电商" vs "供应链/物流/采购" 中 SequenceMatcher 给 0 分的问题
+    # 原理：将 query 按常见中文分词粒度（2-4字）拆分为候选词元，
+    #       检查每个词元是否出现在 target 的 '/' 分段中
+    if '/' in target:
+        segments = [s.strip() for s in target.split('/') if s.strip()]
+        # 将 query 按所有可能的 2-4 字子串枚举
+        q_chars = list(query)
+        for length in range(2, min(len(query) + 1, 5)):
+            for i in range(len(q_chars) - length + 1):
+                ngram = "".join(q_chars[i:i + length])
+                for seg in segments:
+                    if ngram in seg or seg in ngram:
+                        # 匹配到的词元越长，权重越高
+                        overlap_score = 0.3 + 0.15 * (length - 2)
+                        base = max(base, overlap_score)
+    elif len(query) >= 2 and len(target) >= 2:
+        # target 无 '/' 但也可以做 ngram 重叠检测
+        for length in range(2, min(len(query), len(target)) + 1):
+            found = False
+            for i in range(len(query) - length + 1):
+                ngram = query[i:i + length]
+                if ngram in target:
+                    overlap_score = 0.3 + 0.15 * (length - 2)
+                    base = max(base, overlap_score)
+                    found = True
+                    break
+            if found:
+                break
+
+    return base
+
+
+def search_context(industry_query: str, position_query: str, top_n: int = 3) -> dict:
+    """
+    根据用户输入的行业和岗位，在 industry_job_context_db.json 中模糊搜索最匹配的记录。
+
+    参数:
+        industry_query: 用户输入的行业描述（如 "互联网电商"、"金融"）
+        position_query: 用户输入的岗位描述（如 "销售"、"产品经理"）
+        top_n: 返回前 N 条匹配结果
+
+    返回:
+        {
+            "industry_match": [{"name": ..., "score": ...}, ...],
+            "position_match": [{"name": ..., "score": ...}, ...],
+            "results": [{完整记录 + match_score}, ...],
+            "query": {"industry": ..., "position": ...}
+        }
+    """
+    db_path = os.path.join(DECODED_DIR, "industry_job_context_db.json")
+    if not os.path.exists(db_path):
+        return {
+            "industry_match": [],
+            "position_match": [],
+            "results": [],
+            "query": {"industry": industry_query, "position": position_query},
+            "error": f"行业岗位知识库不存在: {db_path}"
+        }
+
+    with open(db_path, "r", encoding="utf-8") as f:
+        db = json.load(f)
+
+    # 1. 收集所有唯一行业名
+    all_industries = sorted(set(item.get("industry", "") for item in db))
+    # 2. 收集所有唯一岗位（category + archetype 合并）
+    all_positions = set()
+    for item in db:
+        all_positions.add(item.get("position_category", ""))
+        all_positions.add(item.get("position_archetype", ""))
+    all_positions = sorted(all_positions)
+
+    # 3. 行业模糊匹配 —— 返回 top_n 行业名及分数
+    ind_scores = [(name, _fuzzy_score(industry_query, name)) for name in all_industries]
+    ind_scores.sort(key=lambda x: x[1], reverse=True)
+    industry_match = [{"name": n, "score": round(s, 3)} for n, s in ind_scores[:top_n] if s > 0.25]
+
+    # 4. 岗位模糊匹配 —— 返回 top_n 岗位名及分数
+    pos_scores = [(name, _fuzzy_score(position_query, name)) for name in all_positions]
+    pos_scores.sort(key=lambda x: x[1], reverse=True)
+    position_match = [{"name": n, "score": round(s, 3)} for n, s in pos_scores[:top_n] if s > 0.25]
+
+    # 5. 综合匹配：每条记录计算行业分 + 岗位分（取 category 和 archetype 中较高者）
+    scored_records = []
+    for item in db:
+        ind_name = item.get("industry", "")
+        cat_name = item.get("position_category", "")
+        arch_name = item.get("position_archetype", "")
+
+        # 行业分：直接对每条记录的行业名计算分数
+        ind_score = _fuzzy_score(industry_query, ind_name)
+
+        # 岗位分：取 category 和 archetype 中的较高分
+        cat_score = _fuzzy_score(position_query, cat_name)
+        arch_score = _fuzzy_score(position_query, arch_name)
+        pos_score = max(cat_score, arch_score)
+
+        # 综合分 = 行业分 * 0.4 + 岗位分 * 0.6（岗位更关键）
+        combined = ind_score * 0.4 + pos_score * 0.6
+
+        if combined > 0.25:
+            scored_records.append({
+                "record": item,
+                "match_score": round(combined, 3),
+                "industry_score": round(ind_score, 3),
+                "position_score": round(pos_score, 3),
+                "matched_position_field": "archetype" if arch_score >= cat_score else "category"
+            })
+
+    scored_records.sort(key=lambda x: x["match_score"], reverse=True)
+    results = scored_records[:top_n]
+
+    # 输出结果中保留完整记录，去掉 "record" 包装
+    output_results = []
+    for r in results:
+        entry = dict(r["record"])
+        entry["_meta"] = {
+            "match_score": r["match_score"],
+            "industry_score": r["industry_score"],
+            "position_score": r["position_score"],
+            "matched_position_field": r["matched_position_field"]
+        }
+        output_results.append(entry)
+
+    return {
+        "industry_match": industry_match,
+        "position_match": position_match,
+        "results": output_results,
+        "query": {"industry": industry_query, "position": position_query}
+    }
+
+
 def query_refs(dim_names: list) -> dict:
     """
     按维度精准检索所有知识库，返回结构化的参考资料摘要。
@@ -724,7 +926,8 @@ def query_refs(dim_names: list) -> dict:
       "parameter_guide": "..."
     }
     """
-    result = {"dimensions": {}, "templates": [], "competence_sjt": [], "examples": [], "parameter_guide": ""}
+    result = {"dimensions": {}, "templates": [], "competence_sjt": [], "examples": [], "parameter_guide": "", "skipped_dimensions": []}
+    found_dims = set()
 
     # 1. 胜任特征辞典
     dict_json_path = os.path.join(DECODED_DIR, "competence_dictionary.json")
@@ -743,6 +946,12 @@ def query_refs(dim_names: list) -> dict:
                     "low_score_features": dim.get("low_score_features", ""),
                     "behavior_levels": dim.get("behavior_levels", {}),
                 }
+                found_dims.add(dim_name)
+
+    # 记录未找到的维度
+    for dim_name in dim_names:
+        if dim_name not in found_dims:
+            result["skipped_dimensions"].append(dim_name)
 
     # 2. 母题模板（extracted_templates.json）
     templates_path = os.path.join(DECODED_DIR, "extracted_templates.json")
@@ -828,8 +1037,9 @@ def generate_docs_from_temp(industry: str, position: str, output_dir: str = None
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("用法: python gensjt.py <密码> [命令] [选项]")
-        print("  <密码>                     - 验证解密密码，解密参考资料")
-        print("  query --dimensions D1,D2   - 按维度检索知识库，输出精简参考资料（JSON）")
+        print("  verify                     - 仅验证密码")
+        print("  query --dimensions D1,D2 [--industry 行业] [--position 岗位]")
+        print("                              按维度检索知识库 + 可选行业岗位模糊搜索")
         print("  gen_docs [--output-dir <路径>] - 从 temp_items.json 生成三份文档")
         sys.exit(1)
 
@@ -838,12 +1048,17 @@ if __name__ == "__main__":
         print("密码错误")
         sys.exit(1)
 
+    # verify 命令：仅验证密码，不执行任何其他操作
+    if len(sys.argv) >= 3 and sys.argv[2] == "verify":
+        print("密码验证通过")
+        sys.exit(0)
+
     decrypt_references(password)
     if "query" not in (sys.argv[2:] if len(sys.argv) > 2 else []):
         print("参考资料解密成功")
 
     if len(sys.argv) >= 3 and sys.argv[2] == "query":
-        # query 命令：按维度检索知识库
+        # query 命令：按维度检索知识库 + 可选行业岗位模糊搜索
         if "--dimensions" not in sys.argv:
             print("错误：query 命令需要 --dimensions 参数，如 --dimensions 创新思维,压力应对")
             sys.exit(1)
@@ -857,6 +1072,27 @@ if __name__ == "__main__":
             print("错误：维度列表为空")
             sys.exit(1)
         result = query_refs(dim_names)
+
+        # 可选：行业岗位模糊搜索
+        industry_query = None
+        position_query = None
+        if "--industry" in sys.argv:
+            iidx = sys.argv.index("--industry")
+            if iidx + 1 < len(sys.argv):
+                industry_query = sys.argv[iidx + 1]
+        if "--position" in sys.argv:
+            pidx = sys.argv.index("--position")
+            if pidx + 1 < len(sys.argv):
+                position_query = sys.argv[pidx + 1]
+
+        if industry_query or position_query:
+            ctx = search_context(
+                industry_query or "",
+                position_query or "",
+                top_n=3
+            )
+            result["job_context"] = ctx
+
         print(json.dumps(result, ensure_ascii=False, indent=2))
 
     elif len(sys.argv) >= 3 and sys.argv[2] == "gen_docs":
