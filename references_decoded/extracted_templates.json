@@ -1,7 +1,7 @@
 [
   {
     "dimension": "发展培养",
-    "template_id": "TMPL_DEV_001",
+    "template_id": "发展_001",
     "item_skeleton": "你是某{{Industry}}公司{{Department}}的{{Role}}。通过半年多的观察你发现{{Name}}不仅本职工作能顺利完成，并且在一些紧急任务上勇于承担责任，平时会主动承担一些沟通协调的工作，他的抗压能力、自我调适能力也都在很多工作过程中展现出来。你现在要对团队工作进行安排调整，针对{{Name}}你会怎么安排？",
     "options_skeleton": {
       "A": {
@@ -25,7 +25,7 @@
   },
   {
     "dimension": "发展培养",
-    "template_id": "SJT_DT_001",
+    "template_id": "发展_002",
     "item_skeleton": "你下属的一名员工今年没有得到预期的职级晋升，其最近情绪比较低落。根据你的了解，这位下属日常工作比较努力，但是工作产出方面没能达到要求。面对此情况，你最可能会怎么做？",
     "options_skeleton": {
       "A": {
@@ -49,7 +49,7 @@
   },
   {
     "dimension": "发展培养",
-    "template_id": "DT1",
+    "template_id": "发展_003",
     "item_skeleton": "{{Name}}是你团队中的一名骨干员工，最近{{Name}}觉得自己工作负担过重，很难兼顾个人生活，想要转岗去做一些基础性工作。但看到同级别的人都在争取晋升机会，自己也感到不甘心。{{Name}}来寻求你的帮助，你最可能会怎么做？",
     "options_skeleton": {
       "A": {
@@ -73,7 +73,7 @@
   },
   {
     "dimension": "发展培养",
-    "template_id": "SJT_DV_001",
+    "template_id": "发展_004",
     "item_skeleton": "{{Name}}是您{{Department}}中刚入职{{Tenure}}的{{New_Employee_Position}}。您找其了解工作感受，{{Name}}表示近期比较迷茫，都是按他人安排做事，虽然学到不少东西，但不确定自己的未来发展方向。了解{{Name}}的困惑后，您会怎么做？",
     "options_skeleton": {
       "A": {
@@ -97,7 +97,7 @@
   },
   {
     "dimension": "发展培养",
-    "template_id": "SJT_DEV_001",
+    "template_id": "发展_005",
     "item_skeleton": "你的团队一直以来业绩优异，公司决定近期提拔你，要求你向公司推荐继任者。你觉得团队中的{{Name}}是不错的人选，但前期与{{Name}}沟通中发现他对自己的定位并不明确，还在纠结是应该往专业方向上发展，还是往管理方向上发展。面对这种情况你最可能怎么做？",
     "options_skeleton": {
       "A": {
@@ -121,7 +121,7 @@
   },
   {
     "dimension": "指导",
-    "template_id": "T01",
+    "template_id": "指导_001",
     "item_skeleton": "你是某团队的管理者，近期招募了一些实习生来工作。经过一段时间的接触，你发现实习生{{Name}}工作能力不错但性格比较内向，遇到问题时喜欢自己钻研而不向他人寻求帮助，有时拖延了进度也不会及时反馈，这导致他的产出相比其他人较低。针对这种情况你打算怎么做？",
     "options_skeleton": {
       "A": {
@@ -145,7 +145,7 @@
   },
   {
     "dimension": "指导",
-    "template_id": "TMP-001",
+    "template_id": "指导_002",
     "item_skeleton": "你是{{Department}}的一名管理者{{Manager}}。最近，团队中有一位资历较深的员工{{Name}}常向你抱怨工作不顺利。进一步了解发现，他与团队其他成员相处不佳，不愿接受他人意见，并希望通过自己{{Lead_Team}}来摆脱困境。这天，{{Name}}找到你，声称自己的{{Business_Ability}}已经达到晋升标准。这种情况下，你打算如何做？",
     "options_skeleton": {
       "A": {
@@ -169,7 +169,7 @@
   },
   {
     "dimension": "指导",
-    "template_id": "SJT_GUIDE_001",
+    "template_id": "指导_003",
     "item_skeleton": "你正要去参加一个{{Meeting}}，下属{{Subordinate}}找到你，跟你说有一个{{Task}}他觉得很困难，做起来有些吃力，想要寻求你的建议。但是还有10分钟{{Meeting}}就要开始了，这时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -193,7 +193,7 @@
   },
   {
     "dimension": "指导",
-    "template_id": "T001",
+    "template_id": "指导_004",
     "item_skeleton": "你是某团队的管理者，你的下属{{Name}}主要负责多项工作。你发现{{Name}}是一个兴趣导向的人，她对于感兴趣的工作，完成效率非常高，但是对其他不感兴趣的工作，效率较低，往往需要督促来保证进度。面对这种情况,你打算怎么做？",
     "options_skeleton": {
       "A": {
@@ -217,7 +217,7 @@
   },
   {
     "dimension": "指导",
-    "template_id": "TMPL_GUIDE_001",
+    "template_id": "指导_005",
     "item_skeleton": "{{Name}}是你团队中一名资历最老的成员，过去业务能力较强。早在团队刚刚成立时{{Name}}就从其他团队调任过来，并且当年你入职时也是他面试的你。最近你们团队在拓展一个新的业务领域，在工作转型期间，{{Name}}对这个领域的接受速度比较慢，转型遇到困难，他非常沮丧。面对这种情况，你最可能会怎么做？",
     "options_skeleton": {
       "A": {
@@ -241,7 +241,7 @@
   },
   {
     "dimension": "团队凝聚",
-    "template_id": "T001",
+    "template_id": "团队_001",
     "item_skeleton": "由于业务调整，你带领的{{Department_A}}与之前提供技术支持的{{Department_B}}合并，合并后的团队由你负责。两周后，你发现负责{{Department_B}}的下属倾向单独完成任务，对参与{{Department_A}}相关的讨论不太积极。经了解，{{Department_B}}的成员觉得自己的任务是承接{{Department_A}}的需求，不需要过多参与讨论。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -265,7 +265,7 @@
   },
   {
     "dimension": "团队凝聚",
-    "template_id": "T_TEAM_COHESION_001",
+    "template_id": "团队_002",
     "item_skeleton": "由于部门调整，领导委任你接管了{{Department}}。该团队之前被分成了若干个小组，考虑到各小组现阶段均有项目正在进行中，故他们的工作安排均未变更。一段时间后，你发现有些小组忙得不可开交，而有的小组因为要在上一环节成果的基础上开展工作，所以目前比较清闲。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -289,7 +289,7 @@
   },
   {
     "dimension": "团队凝聚",
-    "template_id": "TMP001",
+    "template_id": "团队_003",
     "item_skeleton": "为承接公司的一项艰巨任务，你奉命将现有{{Size}}人的团队扩充至{{NewSize}}人。你推荐了几名之前一直跟随你的资深员工担任组长，负责部分管理工作。一段时间后，你发现团队氛围不够团结，小组间协作不畅，与组长们沟通后得知，他们也普遍反映管理工作比一线业务工作更令人头疼。面对这种情况，你会怎么办？",
     "options_skeleton": {
       "A": {
@@ -313,7 +313,7 @@
   },
   {
     "dimension": "协调",
-    "template_id": "SJT_COORD_001",
+    "template_id": "协调_001",
     "item_skeleton": "你是{{Department}}的负责人。{{上级}}希望能在现有技术的基础上进一步优化{{Business_Action}}以提升效率，并安排你的团队先自行摸索，暂不将该工作列入年度指标。经过调研，你发现该{{Business_Action}}优化难度高，需要较多人力投入，团队内的骨干员工手头事多，精力有限，新员工虽然感兴趣但觉得自己能力有限。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -337,7 +337,7 @@
   },
   {
     "dimension": "压力应对",
-    "template_id": "SJT_TEMP_001",
+    "template_id": "压力_001",
     "item_skeleton": "你刚进入一个{{New_Context}}，工作了一段时间后，发现周围的{{Peers}}都很优秀，自己好像很普通，很多事情都不如别人，这让你很有挫败感。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -361,7 +361,7 @@
   },
   {
     "dimension": "压力应对",
-    "template_id": "PR-001",
+    "template_id": "压力_002",
     "item_skeleton": "你平时负责的工作都完成得不错，业绩也比较优秀。最近你接手了一项比较繁琐的工作，需要特别细致才能完成，这正是你所不擅长的，你感到有些压力，担心难以胜任。面对这种情况，你会如何考虑？",
     "options_skeleton": {
       "A": {
@@ -385,7 +385,7 @@
   },
   {
     "dimension": "压力应对",
-    "template_id": "TMP-001",
+    "template_id": "压力_003",
     "item_skeleton": "{{Company}}进行{{Department_Reorganization}}，你被调至一个{{New_Department}}，参与该部门目前正在进行的一个{{Project}}。该部门人手较为短缺且大家都很忙碌，没有同事带你熟悉，你对这个{{Project}}也完全不了解，不知该从何处下手。在这种情况下，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -409,7 +409,7 @@
   },
   {
     "dimension": "压力应对",
-    "template_id": "SJT_Pressure_001",
+    "template_id": "压力_004",
     "item_skeleton": "最近{{Department}}的一个{{Project}}有较强的{{Specialized_Needs}}，你是团队中唯一具备{{Background}}的人，所以在招到{{Qualified_Person}}之前先由你来负责。你的工作量很大，几乎天天都要熬夜，有时候甚至连吃饭的时间都没有。面对这种情况，你最可能会怎么做？",
     "options_skeleton": {
       "A": {
@@ -433,7 +433,7 @@
   },
   {
     "dimension": "压力应对",
-    "template_id": "SJT_PRESSURE_001",
+    "template_id": "压力_005",
     "item_skeleton": "你刚入职一段时间，工作还在适应期，带你的{{Mentor}}就突然离职了。他离职后，原本由他负责的工作都落到了你的身上，这让你压力骤增。但是，和你对接的{{Colleague}}经常对你的工作表示不满，甚至向{{Supervisor}}反映你的工作态度不认真。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -457,7 +457,7 @@
   },
   {
     "dimension": "灵活应变",
-    "template_id": "SJT_Flex_001",
+    "template_id": "灵活_001",
     "item_skeleton": "今天有一个重要的{{Important_Party}}来企业进行{{Visit_Activity}}，某{{Disgruntled_Person(s)}}围堵在管理者办公室门外，态度强硬，要求公司解决其{{Unreasonable_Demands}}。眼看{{Important_Party}}就要到达，如果你是该公司的{{Role}}，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -481,7 +481,7 @@
   },
   {
     "dimension": "灵活应变",
-    "template_id": "FLEX_001",
+    "template_id": "灵活_002",
     "item_skeleton": "你和{{Leader}}计划在{{Time}}前去外地参加一场{{Event}}，想借此进一步提升公司影响力。你们准备提前到现场踩点，所以你请{{Department}}帮忙预定了出发当天的高铁票。你提前40分钟到达高铁站准备进站等候{{Leader}}，发现票务信息有误。现在离检票结束还有30分钟。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -505,7 +505,7 @@
   },
   {
     "dimension": "灵活应变",
-    "template_id": "SJT_Flex_001",
+    "template_id": "灵活_003",
     "item_skeleton": "因突发{{Event}}，{{Team}}分为两队执行{{Business_Action}}。此时其中一队发生{{Abnormal_Incident}}，而你作为该活动的负责人，正在另一队，得知消息后你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -529,7 +529,7 @@
   },
   {
     "dimension": "灵活应变",
-    "template_id": "SJT-Flex-001",
+    "template_id": "灵活_004",
     "item_skeleton": "你是新晋升的{{Role}}，领导安排你明天{{Time}}去{{Transport_Hub}}接一位非常重要的{{VIP_Client}}。当天早上，你突然遇到{{Emergent_Issue}}，无法前往。同时，客户通知你他改签了更早的交通方式，将提前到达。现在时间紧急，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -553,7 +553,7 @@
   },
   {
     "dimension": "灵活应变",
-    "template_id": "SJT_Flex_001",
+    "template_id": "灵活_005",
     "item_skeleton": "你所在的{{Department}}受托，为{{Target_Audience}}进行{{Training_Topic}}培训，本次培训由你负责。在培训开始前10分钟，有工作人员告诉你，由于意外情况，{{Expert}}可能还需要很久时间才能到达。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -577,7 +577,7 @@
   },
   {
     "dimension": "影响力",
-    "template_id": "INFLUENCE_01",
+    "template_id": "影响_001",
     "item_skeleton": "假设你是{{Department}}内某个项目组的负责人，根据单位规定，项目组需安排一名成员到基层承担一项具有挑战性的任务（工作压力大、条件艰苦），具体人选和方式由你决定。在动员过程中，你更倾向于采用以下哪种做法？",
     "options_skeleton": {
       "A": {
@@ -601,7 +601,7 @@
   },
   {
     "dimension": "影响力",
-    "template_id": "SJT_INFL_001",
+    "template_id": "影响_002",
     "item_skeleton": "如果你是公司的{{Role_Higher}}，近期公司计划出台一项{{Plan}}。经过初期调查，你了解到一些{{Department_Manager}}对此规划持否定态度。此时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -625,7 +625,7 @@
   },
   {
     "dimension": "影响力",
-    "template_id": "SJT_001",
+    "template_id": "影响_003",
     "item_skeleton": "受外部环境变化的影响，{{Industry}}面临{{Business_Situation}}（如业绩下滑、市场萎缩等）。为扭转局面，公司公开招聘{{Department}}的{{Role}}。你参加了该岗位的竞聘。在竞聘演说时，你认为最能展现你影响力、最有说服力的表现是哪个？",
     "options_skeleton": {
       "A": {
@@ -649,7 +649,7 @@
   },
   {
     "dimension": "影响力",
-    "template_id": "SJT_001",
+    "template_id": "影响_004",
     "item_skeleton": "{{Name}}是{{Industry}}公司{{Department}}的负责人，该团队以往的业绩都不错，每年都有新成果问世。最近团队遇到了{{Business_Action}}瓶颈，迟迟找不到方向，导致团队士气有些低落。此时，如果你是{{Name}}，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -673,7 +673,7 @@
   },
   {
     "dimension": "责任心",
-    "template_id": "SJT_001",
+    "template_id": "责任_001",
     "item_skeleton": "{{Company}}首次举办{{Event}}，组织工作由{{Name}}负责。由于{{Department1}}没有完全按计划执行，而且个别{{Department2}}之间配合不力，所以{{Event}}没有取得预想效果。{{Superior}}对此很不满意。你如何看待此事？",
     "options_skeleton": {
       "A": {
@@ -697,7 +697,7 @@
   },
   {
     "dimension": "责任心",
-    "template_id": "SJT_001",
+    "template_id": "责任_002",
     "item_skeleton": "你担任一个{{Department}}的{{Role}}，团队工作非常繁忙，为提高效率，你安排{{Team_Member}}负责{{Task_Type}}，而你只对{{Core_Responsibility}}把关。实行一段时间后，你发现成果经常存在{{Quality_Issue}}。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -721,7 +721,7 @@
   },
   {
     "dimension": "主动性",
-    "template_id": "SJT_001",
+    "template_id": "主动_001",
     "item_skeleton": "你负责某重大{{Business_Action}}项目的招标工作。现已有几家候选方提交了项目申请书，但你对这些候选方不太满意。{{Name}}是该领域的权威机构，由{{Name}}来承担会更好，可{{Name}}暂未参加竞标。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -745,7 +745,7 @@
   },
   {
     "dimension": "主动性",
-    "template_id": "SJT_001",
+    "template_id": "主动_002",
     "item_skeleton": "{{Name}}半年前调到某{{Company}}的{{Department}}负责{{Role}}工作。到任后，他逐步了解了整个公司的状况，发现各部门{{Department}}的管理者多来自于不同{{Industry}}，专业对口的很少，有些对工作产生了消极影响。如果你是{{Name}}，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -769,7 +769,7 @@
   },
   {
     "dimension": "主动性",
-    "template_id": "SJT-001",
+    "template_id": "主动_003",
     "item_skeleton": "你作为{{Role}}负责一项{{Department}}内部使用的{{Project}}，通过市场调研，你发现外部同样有对{{Project}}的需求。但是目前{{Project}}在{{Department}}内部使用时间较短，且不是部门的发展重点，向外推广的想法也一直未得到上级和同事的响应。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -793,7 +793,7 @@
   },
   {
     "dimension": "主动性",
-    "template_id": "SJT_001",
+    "template_id": "主动_004",
     "item_skeleton": "你进入{{Department}}已经有一段时间，主要从事一些基础性的工作，并已从最初的不适变得得心应手。近期部门指派团队承担一个新{{Project}}，这是个业务突破的机会，团队中只有你曾经接触过类似项目，{{Supervisor}}希望你能加入。这时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -817,7 +817,7 @@
   },
   {
     "dimension": "主动性",
-    "template_id": "SJT_INITIATIVE_001",
+    "template_id": "主动_005",
     "item_skeleton": "你所在的{{Department}}最近在{{Business_Action}}一个新的{{Product}}，而恰好你之前的{{Industry}}也开发过类似的{{Product}}，并且最后的成效不错，市场反应也很好，因此，{{Role}}提到有时间你可以来找他聊一聊你所了解的相关情况，以便后续{{Product}}的研发与改进，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -841,7 +841,7 @@
   },
   {
     "dimension": "资源管理",
-    "template_id": "SJT_001",
+    "template_id": "资源_001",
     "item_skeleton": "你是{{Team}}的负责人，由于表现优异，{{Supervisor}}希望你们将成功经验分享给{{Organization}}的其他团队。目前虽然团队成员有意愿开展{{Task}}工作，但因近期{{Workload_Surge}}，时间上相对紧张。面对这种情况，你会如何做？",
     "options_skeleton": {
       "A": {
@@ -865,7 +865,7 @@
   },
   {
     "dimension": "资源管理",
-    "template_id": "SJT_RESOURCE_MGMT_001",
+    "template_id": "资源_002",
     "item_skeleton": "你是{{Department}}的团队负责人，团队有{{ExpertRole}}一名和{{JuniorRoles}}若干名。最近需要对{{OtherDepartment}}的一个{{Project}}进行为期一个月的业务支持。{{ExpertRole}}常向你表示自己满负荷，而{{JuniorRoles}}也反映{{ExpertRole}}没时间指导他们。同时，{{OtherDepartment}}的{{SupportTeamExpert}}也忙于自己的业务，无法提供及时支持。作为团队负责人，为保证业务顺利进行，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -889,7 +889,7 @@
   },
   {
     "dimension": "资源管理",
-    "template_id": "SJT_001",
+    "template_id": "资源_003",
     "item_skeleton": "你是某{{Project_Context}}项目的负责人，该项目已进入收尾阶段。上级要求在项目中增加几个新任务，并要求按原定期限交付。由于项目牵涉范围较广，团队多数成员只愿负责自己原有的模块，不愿额外承担工作，而短期内难以找到人手来对接这些新任务。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -913,7 +913,7 @@
   },
   {
     "dimension": "资源管理",
-    "template_id": "SJT_RES_001",
+    "template_id": "资源_004",
     "item_skeleton": "你是{{Project}}的{{Role}}，该项目经常会有临时增加的{{Unplanned_Tasks}}，会占用大量的人力，导致团队很多{{Routine_Tasks}}（如{{Specific_Routine}}等）没有人做。因此团队总是在{{Period_End}}耗费大量时间处理{{Routine_Tasks}}，人力资源总是阶段性紧张。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -937,7 +937,7 @@
   },
   {
     "dimension": "资源管理",
-    "template_id": "SJT_001",
+    "template_id": "资源_005",
     "item_skeleton": "你是{{Department}}的负责人。近期，你作为整体负责人承担了一个项目，项目协调了多个团队，以尽快完成项目的实施工作。项目进行中，你发现有个团队在一个环节遇到了重大技术瓶颈，进度出现了滞后，正在研究解决。面对这种情况，在请示领导帮助协调资源时，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -961,7 +961,7 @@
   },
   {
     "dimension": "自我管理",
-    "template_id": "SJT_SM_001",
+    "template_id": "自我_001",
     "item_skeleton": "在{{Meeting_Type}}上，{{Superior}}为了促进团队内部的交流与合作，要求每位成员分享自己的{{Work_Experience}}。然而，你当前手头有大量{{Primary_Work}}需要处理，参与分享会严重打乱你的{{Primary_Schedule}}。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -985,7 +985,7 @@
   },
   {
     "dimension": "自我管理",
-    "template_id": "SJT_SM_001",
+    "template_id": "自我_002",
     "item_skeleton": "近期你入职了一家新公司，试用期是六个月。因为自己的{{Business_Action}}业绩突出，你申请了提前转正。部门领导经过综合评估，认为你的{{Business_Action}}表现不错，但是沟通方式遭到过其他同事的投诉，因此需要继续观察。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1009,7 +1009,7 @@
   },
   {
     "dimension": "自我管理",
-    "template_id": "SJT_SM_001",
+    "template_id": "自我_003",
     "item_skeleton": "你在当前岗位上已经工作了{{Years}}年，当前工作对你已经没有挑战，你开始感到枯燥。公司有一个外部学习/培训的机会令你很感兴趣，也有助于你进一步提升自己。但由于时间精力有限，如果参加培训，有可能影响本职工作。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1033,7 +1033,7 @@
   },
   {
     "dimension": "自我提升",
-    "template_id": "SJT_SelfImprove_001",
+    "template_id": "自我_001",
     "item_skeleton": "今年你刚加入到{{Department}}团队，参与一个{{Project}}的{{Business_Action}}工作。该{{Project}}上线后，你发现{{Metric}}的失败率仍有6%。于是你请其他团队在这方面经验丰富的{{Name}}帮忙修复了{{Issue}}，{{Project}}也得以更好的运行。接下来你打算怎么做？",
     "options_skeleton": {
       "A": {
@@ -1057,7 +1057,7 @@
   },
   {
     "dimension": "自我提升",
-    "template_id": "T001",
+    "template_id": "自我_002",
     "item_skeleton": "最近，你们团队接手了一个新项目，为了高效工作，上级将团队分成了{{Department1}}、{{Department2}}和{{Department3}}。由于在这三项分工中你最熟悉{{Department1}}的工作，所以加入了{{Department1}}，你们的工作内容比较简单，常常能够以较短的时间完成。接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1081,7 +1081,7 @@
   },
   {
     "dimension": "自我提升",
-    "template_id": "self_improve_001",
+    "template_id": "自我_003",
     "item_skeleton": "最近，作为{{Role}}，你被抽调加入一个新项目组提供支持。尽管前期遇到一些波折，但你凭借丰富的经验成功完成了核心任务，目前后续工作并不繁忙，你有了部分自由支配的时间。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1105,7 +1105,7 @@
   },
   {
     "dimension": "自我提升",
-    "template_id": "SJT_001",
+    "template_id": "自我_004",
     "item_skeleton": "最近你刚刚完成了一个{{Business_Action}}，在月末的总结会上，{{Name}}（上级）对成果表示了认可，对你的表现也给予了肯定。同时，{{Name}}指出你还有进步空间，以后可以继续努力，接着又安排你负责一个类似的{{Business_Action}}。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1129,7 +1129,7 @@
   },
   {
     "dimension": "自我提升",
-    "template_id": "ST-001",
+    "template_id": "自我_005",
     "item_skeleton": "最近你承担了一项{{Business_Action}}工作，由于是第一次接手此类工作，你十分认真地设计了一个{{Business_Action}}方案，并收集到了大量的资料。在阶段汇报时大家都认为你的工作十分出色，组长也对你提出了表扬，接下来你准备撰写{{Business_Action}}报告。这时你打算怎么办？",
     "options_skeleton": {
       "A": {
@@ -1153,7 +1153,7 @@
   },
   {
     "dimension": "自我认知",
-    "template_id": "SJT_SELF_001",
+    "template_id": "自我_001",
     "item_skeleton": "为了应对业务发展需要，最近{{Company}}进行了组织架构调整，而你也从原来的{{OldDepartment}}调整到了新的{{NewDepartment}}。因为不熟悉该部门的工作，你最近的工作效率变得很低，不像从前那样得心应手。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1177,7 +1177,7 @@
   },
   {
     "dimension": "自我认知",
-    "template_id": "SJT_SelfAware_001",
+    "template_id": "自我_002",
     "item_skeleton": "由于你出色地完成了{{Important_Tasks}}，{{Supervisor}}对你表示赞赏，并计划让你在明年负责{{New_Project}}。然而，你无意中听到{{Colleague}}私下议论，认为你缺乏相应的经验，不足以承担此职责。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1201,7 +1201,7 @@
   },
   {
     "dimension": "自我认知",
-    "template_id": "SJT-SR-01",
+    "template_id": "自我_003",
     "item_skeleton": "假设你即将到{{Department}}担任{{Role}}，在正式上任前你了解到该部门的人员构成如下：一位{{ManagerTitle}}，若干位{{DeputyTitle}}，若干位{{SubordinateTitle}}以及众多工作人员。除了你之外，其他人都是部门的老员工。对此你会怎么想？",
     "options_skeleton": {
       "A": {
@@ -1225,7 +1225,7 @@
   },
   {
     "dimension": "自我认知",
-    "template_id": "SJT_SELF_01",
+    "template_id": "自我_004",
     "item_skeleton": "最近你接手了一个新的{{Project}}，但你之前没有带领和参与类似项目的经验。工作进展到中期时，发现整个项目的进展有落后的风险，但你不确定问题出在了哪里。某天，你的{{Leader}}把你叫到办公室，询问你工作的近况，这时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1249,7 +1249,7 @@
   },
   {
     "dimension": "自我认知",
-    "template_id": "SJT_001",
+    "template_id": "自我_005",
     "item_skeleton": "由于公司人员调动，你被编入了一个新的{{Department}}。在进入{{Department}}后的{{TimePeriod}}里，你一直勤勤恳恳地完成各项任务，希望给新同事们留下一个好印象。但在季度考核时，你发现自己的“他人评价”一栏得分较低，这时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1273,7 +1273,7 @@
   },
   {
     "dimension": "人际包容",
-    "template_id": "SJT_002",
+    "template_id": "人际_001",
     "item_skeleton": "你是一个{{Department}}的主管，因工作需要向{{Leader}}提出要{{Business_Action}}，但是另一个团队的主管则认为你的项目组问题在于人浮于事，管理不善。对于该意见，你怎么看待？",
     "options_skeleton": {
       "A": {
@@ -1297,7 +1297,7 @@
   },
   {
     "dimension": "人际包容",
-    "template_id": "T001",
+    "template_id": "人际_002",
     "item_skeleton": "你根据自己的工作经验，为{{Department}}提出一项改进方案，但{{Leader}}未予采纳。不久，{{Department}}内推行了类似方案，内容与你当初的提议很相似。对于{{Leader}}当初的决策，你怎么看待？",
     "options_skeleton": {
       "A": {
@@ -1321,7 +1321,7 @@
   },
   {
     "dimension": "人际包容",
-    "template_id": "SJT_001",
+    "template_id": "人际_003",
     "item_skeleton": "你在{{Industry}}的一家{{Department}}工作，一向受到好评。由于原来的{{Role}}调离，你参加了内部竞聘，结果一位你觉得能力不如你的同事竞聘成功升为{{Role}}了。遇到这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1345,7 +1345,7 @@
   },
   {
     "dimension": "人际包容",
-    "template_id": "SJT_TMP_INTERPERSONAL_INCLUSION_001",
+    "template_id": "人际_004",
     "item_skeleton": "{{Company}}在您所在的{{Team}}里试行了一项{{New_Policy}}。{{Time_Period}}以来，因为这项规定，团队中一些{{Team_Member}}常常向您{{Complain}}。作为团队一员，面对这种情况，您怎么看待？",
     "options_skeleton": {
       "A": {
@@ -1369,7 +1369,7 @@
   },
   {
     "dimension": "人际包容",
-    "template_id": "TMP-202",
+    "template_id": "人际_005",
     "item_skeleton": "你在公司的{{Department}}工作。在一次会议上，另一部门的负责人{{Person}}公开指责你们部门的工作流程繁琐、效率低下，给其他部门带来不便，表示非常不满。面对这种情况，你怎么办？",
     "options_skeleton": {
       "A": {
@@ -1393,7 +1393,7 @@
   },
   {
     "dimension": "追求卓越",
-    "template_id": "SJT_001",
+    "template_id": "追求_001",
     "item_skeleton": "{{Name}}刚从{{Org_Unit}}调到{{New_Department}}，发现这里的同事大多能力出众，自己不如从前一样受领导重视。假如你是{{Name}}，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1417,7 +1417,7 @@
   },
   {
     "dimension": "追求卓越",
-    "template_id": "SJT_PE_001",
+    "template_id": "追求_002",
     "item_skeleton": "你负责的一个{{Project}}进展顺利，已经提前完工，效果非常不错。{{Manager}}认为以你的优异表现，会有很大的晋升机会。同时你了解到{{Department}}正准备做一个有影响力的{{Big_Project}}，他们恰好在招募{{Position}}，与你感兴趣的{{Field}}相关，不过申请的人很多，也都很优秀。这时你准备怎么办？",
     "options_skeleton": {
       "A": {
@@ -1441,7 +1441,7 @@
   },
   {
     "dimension": "追求卓越",
-    "template_id": "SJT_PursuitExcellence_001",
+    "template_id": "追求_003",
     "item_skeleton": "近期，你负责了一项之前没接触过的任务——新的{{Business_Action}}。过去，团队一般都是通过{{传统方式}}进行，你觉得有必要增加{{创新方式}}。团队成员基本认可你的想法，但他们认为：目前可参照的经验不足，手头的资源支持有限，这个想法恐怕难以落实。面对这种情况，你最可能会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1465,7 +1465,7 @@
   },
   {
     "dimension": "追求卓越",
-    "template_id": "SJT-TPL-001",
+    "template_id": "追求_004",
     "item_skeleton": "你是{{Department}}的一名成员，近期你发现了一个非常有潜力的{{NewProjectType}}，于是你写了一份方案并向{{Supervisor}}汇报了你的想法。{{Supervisor}}对你的想法表示支持，但是这项工作并不在当前绩效要求之中，而且开展这个项目会占用较多的资源和精力。这时你打算怎么办？",
     "options_skeleton": {
       "A": {
@@ -1489,7 +1489,7 @@
   },
   {
     "dimension": "追求卓越",
-    "template_id": "T001",
+    "template_id": "追求_005",
     "item_skeleton": "毕业后你入职了一家{{Industry}}公司，随着时间的推移，你发现自己其实更希望接触{{Business_Action}}，让方案落地并产生社会价值。某天朋友告诉你，{{Company}}有个{{Department}}正在招人，你了解到该项目与你的愿望十分契合，但工作会更加忙碌，薪资水平也不会有很大变化。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1513,7 +1513,7 @@
   },
   {
     "dimension": "客户导向",
-    "template_id": "SJT-001",
+    "template_id": "客户_001",
     "item_skeleton": "你在{{Department}}负责某产品的维护，该产品主要面向{{CustomerType}}。一天{{OtherDepartment}}同事向你反映，多位{{CustomerType}}认为应该提升产品的几个功能。根据收到的反馈，你们对产品进行了升级。在新版本的产品上线一周后，{{OtherDepartment}}同事再次找到你，谈到客户觉得虽然基本满足功能要求，但是操作比之前麻烦，比如经常找不到功能按键等。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1537,7 +1537,7 @@
   },
   {
     "dimension": "客户导向",
-    "template_id": "CT-001",
+    "template_id": "客户_002",
     "item_skeleton": "你在公司{{Department}}负责一项核心{{Product}}。但市场上同类{{Product}}较多，竞争十分激烈。因此，上级提出了一个挑战性较高的目标，要求该{{Product}}的{{Customer_Satisfaction_Metric}}在市场同类中处于领先地位，并给你们团队设置了一些{{Business_Indicator}}等客观指标。面对该挑战性的目标，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1561,7 +1561,7 @@
   },
   {
     "dimension": "客户导向",
-    "template_id": "CO-001",
+    "template_id": "客户_003",
     "item_skeleton": "你在{{Department}}，负责一款{{Product}}的维护工作。最近{{Department_B}}向你部门反映，多个客户投诉关于{{Product}}的使用问题。每次投诉，首先由你部门（{{Department}}）排查问题点，有时是客户操作问题，有时是产品自身问题，然后再由{{Department_B}}向客户解释说明。因为此类投诉频发，{{Department_B}}意见很大，认为这影响了他们的业绩。面对这种情况，你会怎么办？",
     "options_skeleton": {
       "A": {
@@ -1585,7 +1585,7 @@
   },
   {
     "dimension": "客户导向",
-    "template_id": "CUS-001",
+    "template_id": "客户_004",
     "item_skeleton": "你在公司{{Department}}，主要负责客户在公司的{{Platform}}上的{{Business_Action}}工作。临近{{Major_Event}}之际，有同事发现，一些关键客户的{{Business_Action}}量急剧上升，用户访问量猛增，甚至超过了压力测试时的估计值。此时有些客户也打电话来投诉说{{Service_Issue}}，你即刻和其他同事解决了客户投诉的问题。在此之后，你准备如何安排下一步的工作？",
     "options_skeleton": {
       "A": {
@@ -1609,7 +1609,7 @@
   },
   {
     "dimension": "客户导向",
-    "template_id": "SJT_CUST_001",
+    "template_id": "客户_005",
     "item_skeleton": "你最近负责了一个{{Product_Type}}优化项目，前几天为了提高用户体验，项目组刚刚推出了一个新版本。新版本上线后，你在用户论坛上发现，有很多人吐槽新版本用起来不顺手，感觉比之前的版本难用了不少。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1633,7 +1633,7 @@
   },
   {
     "dimension": "冲突管理",
-    "template_id": "SJT_Conflict_01",
+    "template_id": "冲突_001",
     "item_skeleton": "你是{{Department1}}的{{Role1}}，你们团队完成了一项{{Business_Action}}的初步开发，正准备推向市场。为了达到最佳效果，你和团队又开始了大量测试/优化工作。但在与{{Department2}}的合作中，他们出于盈利和整体绩效的考虑，对你们的项目成本/资源投入提出了异议。如果你们让步，不仅会影响你们团队的绩效，还可能打击团队内部的士气。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1657,7 +1657,7 @@
   },
   {
     "dimension": "冲突管理",
-    "template_id": "T-CM-001",
+    "template_id": "冲突_002",
     "item_skeleton": "你是公司某{{Project}}团队的负责人，你手下的一个{{Team}}目前正在为一项{{Project}}做筹备，但因该项目涉及到{{Standard}}，需要由外聘{{Expert}}共同参与策划。在合作过程中，{{Team}}负责人与{{Expert}}产生分歧，{{Team}}负责人认为{{Expert}}不懂{{BusinessThinking}}，但{{Expert}}坚持认为对方不懂{{Standard}}，两人多次激烈争论无果，筹备进程也停滞不前。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1681,7 +1681,7 @@
   },
   {
     "dimension": "冲突管理",
-    "template_id": "TM_001",
+    "template_id": "冲突_003",
     "item_skeleton": "你是{{Department1}}的负责人，近期需要与{{Department2}}合作完成某个{{Project}}。前期你们已经共同制定了工作计划，但在实施过程中，{{Department2}}几次延期交付任务，导致{{Department1}}需要加班赶上计划进度。一段时间过后，{{Department1}}内部出现了不满情绪，大家的工作积极性受到了很大影响。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1705,7 +1705,7 @@
   },
   {
     "dimension": "冲突管理",
-    "template_id": "CM_001",
+    "template_id": "冲突_004",
     "item_skeleton": "你所在的{{Department}}负责某项{{Resource}}的{{Management_Action}}，近期有几位同事向你反映，常有其他部门同事想让自己的申请能优先被审批。这些同事有的强调其工作或任务的重要程度，有的请对方部门领导出面向本部门成员施压，给自己的工作带来较大阻碍。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1729,7 +1729,7 @@
   },
   {
     "dimension": "冲突管理",
-    "template_id": "SJT_CM_001",
+    "template_id": "冲突_005",
     "item_skeleton": "你是{{Department}}的负责人，该部门成员大多是新人，近期接手的{{Business_Action}}项目对他们来说比较困难，项目周期又很紧张，于是你想请其他部门一位经验丰富的顾问支持近期工作，该顾问也已同意。但该顾问在自己部门也承担着一些任务，因此其部门负责人希望其专注于本职工作，不同意借调。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1753,7 +1753,7 @@
   },
   {
     "dimension": "监督反馈",
-    "template_id": "SJT_监督反馈_001",
+    "template_id": "监督_001",
     "item_skeleton": "你负责两个{{Team}}，近期接手了一个较为复杂的{{Complex_Task}}，需要两个团队从{{Location}}同时操作。因为需要频繁的信息沟通，你让团队每日提交{{Daily_Report}}向你汇报工作。在{{Meeting}}上你突然发现两个团队在执行过程中忽略了一个关键{{Key_Point}}，如果要修补则需要耗费大量{{Time_Delay}}。为了能按期完成{{Deadline}}，接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1777,7 +1777,7 @@
   },
   {
     "dimension": "监督反馈",
-    "template_id": "SJT_TMP_001",
+    "template_id": "监督_002",
     "item_skeleton": "你是{{Department}}的{{Role}}。目前正处于{{Business_Action}}攻坚期，节奏快压力大。在进程过半时，骨干成员{{Name}}来协商能否延期。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1801,7 +1801,7 @@
   },
   {
     "dimension": "服务意识",
-    "template_id": "SJT_001",
+    "template_id": "服务_001",
     "item_skeleton": "作为{{Role}}，某日接到一位{{Customer}}的投诉电话，抱怨一项{{Service}}的{{Process}}不合理，申请服务需要到{{Location}}提交各种材料，其{{Vulnerable_Person}}因身体原因无法出门，而{{Family_Member}}工作繁忙无法代办，导致一直未能申请。如果你是该{{Role}}，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1825,7 +1825,7 @@
   },
   {
     "dimension": "沟通",
-    "template_id": "01",
+    "template_id": "沟通_001",
     "item_skeleton": "你所在的{{Department}}最近加入了几个{{NewMembers}}，但你发现他们总是不能融入团队。为了增强凝聚力，部门开始定期组织各种{{TeamBuildingActivities}}，但收效甚微。假如你是该部门负责人，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1849,7 +1849,7 @@
   },
   {
     "dimension": "沟通",
-    "template_id": "SJT-COMM-001",
+    "template_id": "沟通_002",
     "item_skeleton": "领导派你和资历丰富的{{Name}}一起去{{Place}}出差，但是到了{{Place}}以后，{{Name}}却一心玩乐，根本没有怎么工作，大部分工作都是由你完成的，进度一拖再拖。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1873,7 +1873,7 @@
   },
   {
     "dimension": "沟通",
-    "template_id": "SJT_COMM_001",
+    "template_id": "沟通_003",
     "item_skeleton": "{{Name}}作为部门重要的{{Role}}一直受到领导的重视，但由于一次{{Business_Action}}中的失误，导致他在会议上被{{Supervisor}}批评。此后他/她的工作积极性大不如前。假如你是{{Name}}的同事，在和他/她聊天的过程中，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1897,7 +1897,7 @@
   },
   {
     "dimension": "沟通",
-    "template_id": "T001",
+    "template_id": "沟通_004",
     "item_skeleton": "年底，公司要求每个部门推选一名{{Award_Name}}。你是部门的负责人，部门的老员工{{Name1}}来公司很多年了，一直非常努力，工作也一向认真负责。但部门最后挑选了能力出众的新员工{{Name2}}。{{Name1}}感到很沮丧，平时总一个人默默叹气，也不再参与部门的活动。此时，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1921,7 +1921,7 @@
   },
   {
     "dimension": "沟通",
-    "template_id": "SJT_COMM_001",
+    "template_id": "沟通_005",
     "item_skeleton": "公司某{{Department}}的{{Manager}}要公开选拔一名{{Position}}，共有5名候选人，其中{{Candidate_A}}来自于该部门，且平日一向认真负责，但能力出众的{{Candidate_B}}最终胜出。假如你是{{Manager}}，接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1945,7 +1945,7 @@
   },
   {
     "dimension": "合作互助",
-    "template_id": "SJT_COOP_001",
+    "template_id": "合作_001",
     "item_skeleton": "公司组织一项需要协作完成的{{Business_Action}}任务，上级让你和同事{{Name}}共同负责，但{{Name}}对任务缺乏兴趣，主动性不高，导致合作没有实质性进展。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1969,7 +1969,7 @@
   },
   {
     "dimension": "合作互助",
-    "template_id": "SJT_001",
+    "template_id": "合作_002",
     "item_skeleton": "你所在的{{Department}}在进行{{Business_Action}}时需要多组合作，你带领的{{Team}}负责接收{{Other_Team}}传来的数据/信息，之后对此进行处理。近期你发现因为工作量突增，{{Other_Team}}的同事工作压力增大，在给你们传递数据/信息时常常会延期，这也影响到了你们团队的处理质量和进度，你也听到了自己组员的抱怨。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -1993,7 +1993,7 @@
   },
   {
     "dimension": "合作互助",
-    "template_id": "SJT_COOP_001",
+    "template_id": "合作_003",
     "item_skeleton": "领导给你所在的{{Department}}下发了一项{{Business_Action}}任务，团队开会后制定了详细的任务时间安排，但同组的{{Name}}因为对时间规划不合理，常常无法按时完成任务，不得已只能请你帮忙。最近，领导要求你们组加快工作进度。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2017,7 +2017,7 @@
   },
   {
     "dimension": "合作互助",
-    "template_id": "SJT_TMP_001",
+    "template_id": "合作_004",
     "item_skeleton": "你和{{Name}}都是{{Department}}的成员，领导安排你们共同完成一次对{{Business_Activity}}的任务，分别负责其中不同的部分。你之前对该任务有一些了解，理解较为深刻。在进行梳理和交流的过程中，你发现他的任务内容有些偏离公司的要求。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2041,7 +2041,7 @@
   },
   {
     "dimension": "合作互助",
-    "template_id": "SJT_TMP_001",
+    "template_id": "合作_005",
     "item_skeleton": "你所在的{{Department}}要和其他{{Department}}合作完成领导安排的{{Project}}，其中一部分{{Business_Action}}是你们部门所擅长的。在过程中你发现，不断有{{OtherDepartment}}的{{Colleague}}来重复问你相同的问题。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2065,7 +2065,7 @@
   },
   {
     "dimension": "激励下属",
-    "template_id": "SJT_003",
+    "template_id": "激励_001",
     "item_skeleton": "近期，你们团队招募了一批{{Role}}。经过一段时间的接触，你发现{{Name}}工作能力非常不错，但性格比较腼腆，工作中遇到问题时喜欢自己钻研而不会向上级或同事寻求帮助，有时拖延了任务进度也没有及时反馈，这使得他的工作效率比其他人低。假设你是该团队的领导，面对这种情况你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2089,7 +2089,7 @@
   },
   {
     "dimension": "激励下属",
-    "template_id": "SJT_001",
+    "template_id": "激励_002",
     "item_skeleton": "你是{{Department}}的{{Role}}，{{Name}}从{{Previous_Role}}转岗成为{{Current_Role}}，负责{{Business_Action}}。{{Name}}多次提出相应的方案，但是总是被你驳回。这让{{Name}}感到特别受挫，几次下来对自己的能力感到怀疑。面对该情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2113,7 +2113,7 @@
   },
   {
     "dimension": "激励下属",
-    "template_id": "SJT_001",
+    "template_id": "激励_003",
     "item_skeleton": "你是公司{{Department}}的{{Role}}。员工{{Name}}入职{{Department}}几年，一直勤勤恳恳，但最近他的主管向你反映{{Name}}的状态不太好。经了解后，你得知最近新入职的员工均来自优秀背景，不仅工作上手很快，还有出色的额外技能，{{Name}}说他压力很大，感觉在公司里很难有上升空间。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2137,7 +2137,7 @@
   },
   {
     "dimension": "激励下属",
-    "template_id": "SJT_001",
+    "template_id": "激励_004",
     "item_skeleton": "你是{{Supervisor_Role}}。年初你们接到了一个新任务，你决定安排{{Subordinate_Name}}作为该任务的负责人。次日，{{Subordinate_Name}}面露难色地过来找你，表示由于自己去年的失误，导致他负责的部分出现了非常低级的错误，所以今年他希望由他人担任负责人，自己说什么都不愿再接手。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2161,7 +2161,7 @@
   },
   {
     "dimension": "激励下属",
-    "template_id": "SJT_MOTIV_001",
+    "template_id": "激励_005",
     "item_skeleton": "{{Name}}是{{Department}}新来的员工，你负责指导他。一天领导临时安排你出差，你便将一个重要的{{Business_Action}}任务全权交由{{Name}}处理，并告知他这份任务非常关键，有几个细节一定注意不要出错。然而{{Name}}提交的成果中出现了多处你提醒过的错误，因此{{Name}}受到了领导的严厉批评，感到非常挫败。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2185,7 +2185,7 @@
   },
   {
     "dimension": "计划组织",
-    "template_id": "SJT_PO_001",
+    "template_id": "计划_001",
     "item_skeleton": "你在{{Company}}，正负责组织一个涉及公司所有{{Department}}的会议，传达公司前不久所颁发的{{Document_Type}}精神。会议约在1个月后进行，具体时间待定。作为会议筹备负责人，下列哪项是你觉得最先应该考虑的问题？",
     "options_skeleton": {
       "A": {
@@ -2209,7 +2209,7 @@
   },
   {
     "dimension": "计划组织",
-    "template_id": "T001",
+    "template_id": "计划_002",
     "item_skeleton": "你是{{Department}}的负责人。为了保证{{Company}}的{{Security_Requirement}}，需要开展一次{{Inspection_Task}}。在检查筹备阶段，有大量头绪繁多的事情需要完成。为提高工作效率，你打算把工作人员分成小组。在任务分解的过程中，下列哪项是最能保证效率提高的安排？",
     "options_skeleton": {
       "A": {
@@ -2233,7 +2233,7 @@
   },
   {
     "dimension": "计划组织",
-    "template_id": "P001",
+    "template_id": "计划_003",
     "item_skeleton": "你在{{Industry}}，正负责组织一个涉及所有{{Department}}的会议，会议将由高层领导来传达公司最新政策。会议的前期筹备涉及下面一些具体工作：①确定会议时间 ②确定会议地点 ③确定会议预算 ④准备会议材料 ⑤确定参会人员名单。下列哪项是你觉得合理的方案计划流程？",
     "options_skeleton": {
       "A": {
@@ -2257,7 +2257,7 @@
   },
   {
     "dimension": "计划组织",
-    "template_id": "T001",
+    "template_id": "计划_004",
     "item_skeleton": "你在公司{{Department}}，正负责组织本年度{{Event_Type}}。昨天你接到通知，受{{Policy}}影响，大会要提前{{Time_Advance}}召开。应对会议时间变更的相关工作涉及以下具体事项：\n①更新相关材料   ②重新确定场地   ③通知相关人员   ④重新确定关键参与者   ⑤更新参与者名单\n下列哪项是你觉得合理的方案计划流程？",
     "options_skeleton": {
       "A": {
@@ -2281,7 +2281,7 @@
   },
   {
     "dimension": "计划组织",
-    "template_id": "SJT_PO_001",
+    "template_id": "计划_005",
     "item_skeleton": "{{Organization}}承办了一次大型行业交流活动，交由{{Department}}负责。届时会有来自全国各地的专家和同行领导参加。这是该部门第一次组织如此大规模的活动，工作量极大。以下哪项是您认为筹备工作中最重要的措施？",
     "options_skeleton": {
       "A": {
@@ -2305,7 +2305,7 @@
   },
   {
     "dimension": "绩效沟通",
-    "template_id": "PC01",
+    "template_id": "绩效_001",
     "item_skeleton": "你是公司{{Department}}的经理。现在正值年中绩效考核期间，你要求部门中一名新晋升的主管{{Name}}为其下属成员做绩效评估。{{Name}}按照公司的要求，在你的指导下完成了绩效评估工作。对于即将进行的绩效沟通，{{Name}}向你表示自己缺乏经验。在这种情况下，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2329,7 +2329,7 @@
   },
   {
     "dimension": "绩效沟通",
-    "template_id": "SJT_PC_001",
+    "template_id": "绩效_002",
     "item_skeleton": "你是某{{Department}}的{{Role}}。你部门的{{Name}}工作突出，绩效评价一直优秀，因此获得了{{Promotion}}。但{{Promotion}}后的第一次{{Assessment}}中，{{Name}}在现有的{{Level}}层次中只能算{{Average}}，因此你给他评价为{{Average}}。绩效沟通中，{{Name}}虽然对这个分数表示接受，但你感受到他有一些{{Emotion}}。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2353,7 +2353,7 @@
   },
   {
     "dimension": "绩效沟通",
-    "template_id": "SJT_PC_001",
+    "template_id": "绩效_003",
     "item_skeleton": "你是某{{Department}}的经理。每年的{{Business_Action}}通常由团队成员与外部合作伙伴合作完成。你团队中的{{Name}}往年都可以完成业绩，但今年他所合作的合作伙伴由于业务战略转移，没有完成年初签订的目标，在绩效评分时你给他评了较低的等级。{{Name}}很不服气，认为自己工作很努力，业绩无法完成他也没有办法。对此，你会怎样与他沟通？",
     "options_skeleton": {
       "A": {
@@ -2377,7 +2377,7 @@
   },
   {
     "dimension": "绩效沟通",
-    "template_id": "PCM-001",
+    "template_id": "绩效_004",
     "item_skeleton": "你是某团队的管理者，近半年来你的团队成员工作都很积极，团队绩效较好。然而由于公司规定绩效要{{Performance_Distribution}}，每个绩效等级都要有一定比例的人，会从工作表现相差无几的下属中选出相对较差的给出低分。因此被评低分的员工{{Name}}很不满，认为你没有公平地打分。对此，你会怎样与他沟通？",
     "options_skeleton": {
       "A": {
@@ -2401,7 +2401,7 @@
   },
   {
     "dimension": "绩效沟通",
-    "template_id": "SJT_PC_001",
+    "template_id": "绩效_005",
     "item_skeleton": "你是某团队负责人。新员工{{NewEmployee}}对承担的工作内容{{WorkContent}}不太感兴趣，日常工作表现一般。年末{{NewEmployee}}与其他团队谈好了转岗{{Transfer}}。年末绩效考评时，由于{{NewEmployee}}承担的工作重要性低且表现一般，因此你为他打了较低的绩效评分{{LowScore}}。{{NewEmployee}}感到很生气，认为你知道他要{{Transfer}}，故意打低分导致转岗失败。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2425,7 +2425,7 @@
   },
   {
     "dimension": "绩效评估",
-    "template_id": "SJT_PERF_001",
+    "template_id": "绩效_001",
     "item_skeleton": "你是{{Department}}的负责人，手下有{{Number}}位团队成员。目前正值{{Event}}，公司要求绩效等级{{Rule}}，你的{{Superior}}让你提供你团队的绩效情况，以方便其进行整个部门的绩效排名和确定。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2449,7 +2449,7 @@
   },
   {
     "dimension": "绩效评估",
-    "template_id": "T001",
+    "template_id": "绩效_002",
     "item_skeleton": "你开始接管一个负责创新前沿任务的{{Department}}。该领域没有可对比的行业标杆和客观指标，许多考核项目缺乏量化标准，绩效评估中存在难以量化的内容。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2473,7 +2473,7 @@
   },
   {
     "dimension": "监督反馈",
-    "template_id": "SJT_TEMPLATE_001",
+    "template_id": "监督_003",
     "item_skeleton": "{{Name}}刚担任{{Department}}的{{Role}}时，对团队取得优秀业绩胸有成竹。但几个月后，负责{{Business_Activity}}的下属老吴报告说，由于{{External_Factor}}，导致很多工作无法正常进行。如果你是{{Name}}，你认为问题出在哪里？",
     "options_skeleton": {
       "A": {
@@ -2497,7 +2497,7 @@
   },
   {
     "dimension": "监督反馈",
-    "template_id": "SJT_SF_001",
+    "template_id": "监督_004",
     "item_skeleton": "{{Organization}}接到一个重要的{{Project}}。{{Leader}}表示：该项目开展初期，我们就一直强调绝不将任何隐患留给下一阶段。该项目体量较大、较为复杂、技术难度大，再加上时间紧、突发{{Crisis}}等，使得项目在推进过程中面临较大的安全风险。假如你是该项目的负责人，为了按计划稳定安全推进，防事故之患，下列哪项是你认为最重要的做法？",
     "options_skeleton": {
       "A": {
@@ -2521,7 +2521,7 @@
   },
   {
     "dimension": "监督反馈",
-    "template_id": "SJT_004",
+    "template_id": "监督_005",
     "item_skeleton": "某公司{{Department}}的{{Name}}经理刚上任不久，非常有信心带领部门取得好的业绩。{{Name}}经理根据集团的发展规划制定了部门年度总工作计划，再根据工作模块制定各小组计划，各小组做具体执行。然而年度考核结果却不如意，大部分工作没能按计划保质保量完成。部分人员表示每个季度的工作量太大，导致任务一直推后堆积完成。{{Name}}为此困惑不解。你认为下列哪项是造成{{Department}}未完成计划的主要原因？",
     "options_skeleton": {
       "A": {
@@ -2545,7 +2545,7 @@
   },
   {
     "dimension": "决策判断",
-    "template_id": "SJT_DEC_001",
+    "template_id": "决策_001",
     "item_skeleton": "某{{Industry}}公司进行{{Reform_project}}改革，作为{{Department}}新上任的负责人{{Name}}，领导指派你主管此项工作。接到任务后，你首先会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2569,7 +2569,7 @@
   },
   {
     "dimension": "决策判断",
-    "template_id": "SJT_DEC_001",
+    "template_id": "决策_002",
     "item_skeleton": "你所在的{{Department}}需要完成一项重要而紧急的{{Project}}，可是部门所有成员都没有类似的项目经验，因此部门领导专门集中了部门内优秀的人才组成攻坚小组来完成这个{{Project}}。任务完成过程中，小组成员就项目的方案产生了分歧。如果你是领导，此时你会如何做？",
     "options_skeleton": {
       "A": {
@@ -2593,7 +2593,7 @@
   },
   {
     "dimension": "结果导向",
-    "template_id": "SJT_001",
+    "template_id": "结果_001",
     "item_skeleton": "你是公司某{{Project_Type}}项目的负责人，近期你们团队致力于研究某项{{Technology}}，该技术在其他公司已经开始应用，但你们团队经过一段时间的探索之后始终无法突破。一些团队成员提出不想再继续坚持，同时领导也表示可以暂缓开发这一技术。面对这种情况，你会怎么办？",
     "options_skeleton": {
       "A": {
@@ -2617,7 +2617,7 @@
   },
   {
     "dimension": "结果导向",
-    "template_id": "SJT_TEMPLATE_001",
+    "template_id": "结果_002",
     "item_skeleton": "近期你们团队在进行{{Industry}}的{{Business_Action}}，你们将{{Business_Action}}的部分外包给了其他公司，在项目初期你们合作的都比较顺利。但是到后期，该公司无奈表示受到近期{{External_Factor}}影响，可能不能按时完工，只能先完成主体部分。眼看距离汇报的日期将近，团队里有人表示可以把一些不太重要的{{Business_Action}}后置。你打算怎么办？",
     "options_skeleton": {
       "A": {
@@ -2641,7 +2641,7 @@
   },
   {
     "dimension": "关怀员工",
-    "template_id": "CARE_001",
+    "template_id": "关怀_001",
     "item_skeleton": "下属{{Name}}今天来上班{{Physical/Emotional_distress}}，你了解到这是由于{{Personal_Issue}}造成的。{{Name}}是个{{Personality_Trait}}的年轻人，尽管他看起来非常难受，但还是在努力处理工作。这时，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2665,7 +2665,7 @@
   },
   {
     "dimension": "关怀员工",
-    "template_id": "SJT_Care_001",
+    "template_id": "关怀_002",
     "item_skeleton": "你是某{{Industry}}集团的{{Senior_Role}}，最近突然收到一位{{Subordinate_Role_1}}和{{Subordinate_Role_2}}的辞职报告，并且听说他们有意加盟另一家规模和薪酬水平相近的公司。你认为他们最可能因为什么跳槽？",
     "options_skeleton": {
       "A": {
@@ -2689,7 +2689,7 @@
   },
   {
     "dimension": "关怀员工",
-    "template_id": "SJT_CARE_001",
+    "template_id": "关怀_003",
     "item_skeleton": "你是一名从{{Department}}普通员工提升起来的领导，近来部门接到一系列复杂且紧急的任务，并且截止日期临近，下属忙得焦头烂额。面对这种情况，你会如何做？",
     "options_skeleton": {
       "A": {
@@ -2713,7 +2713,7 @@
   },
   {
     "dimension": "关怀员工",
-    "template_id": "SJT_CARE_001",
+    "template_id": "关怀_004",
     "item_skeleton": "你是{{Department}}的{{Role}}，主持制定新的{{System_Name}}。为了达到更好的激励效果，你会依据什么原则制定激励措施？",
     "options_skeleton": {
       "A": {
@@ -2737,7 +2737,7 @@
   },
   {
     "dimension": "关怀员工",
-    "template_id": "SJT_001",
+    "template_id": "关怀_005",
     "item_skeleton": "{{Name}}在某公司工作了多年，对公司的各项工作、人事关系都很熟悉。下属们非常希望与他交流相关经验，但现在他已经是该公司的主要负责人，工作繁忙，总找不到机会和下属分享自己的经验。面对这种情况，你认为，{{Name}}应该怎么做？",
     "options_skeleton": {
       "A": {
@@ -2761,7 +2761,7 @@
   },
   {
     "dimension": "跨文化认知",
-    "template_id": "T002",
+    "template_id": "跨文_001",
     "item_skeleton": "你是一位在{{Country}}从事{{Industry}}工作的外籍人员，当地{{People}}（如学生、客户）常以当地传统礼节向你表示尊敬。你觉得这种大礼受不起，于是当对方行礼时，你赶紧制止并扶起对方。当地同事笑你大惊小怪，并劝你以后别再制止。你会作出何种反应？",
     "options_skeleton": {
       "A": {
@@ -2785,7 +2785,7 @@
   },
   {
     "dimension": "跨文化认知",
-    "template_id": "T001",
+    "template_id": "跨文_002",
     "item_skeleton": "你们受到{{Host}}的邀请去他们家参加聚会。{{Host}}的家人来自不同文化背景，有特定的待客习俗（例如，确保客人吃饱是表示热情）。当你们把盘中的食物吃光后，主人问你们是否还要再来一些。你们中有一位{{Student}}来自另一种文化，在他的文化中，拒绝主人的食物被认为是不礼貌的，因此他接受了多次，尽管他已经很饱了。这导致主人担心准备不够而继续准备食物。作为他的朋友，你会如何反应？",
     "options_skeleton": {
       "A": {
@@ -2809,7 +2809,7 @@
   },
   {
     "dimension": "跨文化认知",
-    "template_id": "T001",
+    "template_id": "跨文_003",
     "item_skeleton": "你受雇于一家总部在{{Culture_A}}的跨国公司，后被派往{{Culture_B}}分公司任职经理。一天，你公开表扬了绩效优秀的本地员工{{Name}}，并且想让其他员工知道他是怎么做到的。但{{Name}}表情局促不安并表示不必表扬自己，这是他该做的。你继续称赞道，他是你在公司里见过最优秀、最勤奋的员工，但{{Name}}眼神回避，红着脸点头不说话。你继续赞赏{{Name}}，结果他却抱歉地提出想要离开五分钟，留下尴尬的你。你如何看待这一情况？",
     "options_skeleton": {
       "A": {
@@ -2833,7 +2833,7 @@
   },
   {
     "dimension": "跨文化认知",
-    "template_id": "CC_001",
+    "template_id": "跨文_004",
     "item_skeleton": "{{Name}}是{{Nationality}}裔{{Citizenship}}人，就职于一家{{Industry}}公司，被派驻到{{HostCountry}}。他的主要任务是与当地一家{{PartnerType}}建立合作。经过长期的谈判，签约的重要时刻终于来临。总部在签约仪式的前一个星期给{{Name}}发来了一份非常详细冗长的合同。{{Name}}致电总部，律师说双方合作关系复杂，起草合同要照顾到各方面，当地合作方在界定权属方面比较模糊不清，现在明确总比以后造成麻烦好。签约会议就在明天，如果坚持让对方签订这份合同，他们会认为我们不信任他们，这可能会导致合作失败；如果擅自将合同缩短，总部和法律部都会找自己麻烦，威胁到自己的工作。如果你是{{Name}}，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2857,7 +2857,7 @@
   },
   {
     "dimension": "跨文化认知",
-    "template_id": "SJT_CC_001",
+    "template_id": "跨文_005",
     "item_skeleton": "你是一名在{{Industry}}的{{Role}}。一天你发现一个{{Problem}}，你认为自己有责任解决它，否则它就会被废弃。你投入了时间和精力将其完全修复，效果良好。你为自己的成果感到骄傲，并做了{{Marking}}。但随后你的{{Manager_Nationality}}上级对你的做法进行了批评。你会做出何种反应？",
     "options_skeleton": {
       "A": {
@@ -2881,7 +2881,7 @@
   },
   {
     "dimension": "跨文化适应",
-    "template_id": "SJT_001",
+    "template_id": "跨文_001",
     "item_skeleton": "你是{{Name}}，刚从大学毕业，到{{Country}}工作不久，担任{{Department}}的负责人。你的上司是{{Boss}}，下属都是{{Local_Employees}}。一天，你的上司转发给你一封邮件，内容是一位有丰富经验的{{Senior_Employee}}认为以你的阅历不应该对他的工作进行干涉。但你的上司表示支持你的工作。在这种情况下，你会如何反应？",
     "options_skeleton": {
       "A": {
@@ -2905,7 +2905,7 @@
   },
   {
     "dimension": "跨文化适应",
-    "template_id": "T001",
+    "template_id": "跨文_002",
     "item_skeleton": "你是一位在{{Industry}}公司{{Country}}分公司工作的外派员工，按照合同规定每周工作时长为{{Hours}}小时，工作时间可自由安排。当地项目经理发现部分外派员工会在工作时长外自觉加班，表示乐于把私人时间奉献于工作。正好近期公司接了一个紧急项目且经费紧张，于是项目经理发通知希望外派员工在工作时长满{{Hours}}小时的情况下无薪加班，对本地员工没有明确要求。你会做出何种反应？",
     "options_skeleton": {
       "A": {
@@ -2929,7 +2929,7 @@
   },
   {
     "dimension": "跨文化适应",
-    "template_id": "SJT_CROSS_CULTURE_001",
+    "template_id": "跨文_003",
     "item_skeleton": "你是一名来自{{Source_Country}}的志愿者，在{{Host_Country}}的{{Cultural_Institution}}工作，负责{{Exam_Name}}的报名工作。为了避开报名高峰期，你都会提前几天发布报名通知，但你发现即使每天通过{{Communication_Method}}提醒，大多数当地报名者仍然习惯在截止日期当天或之后才报名。你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -2953,7 +2953,7 @@
   },
   {
     "dimension": "跨文化适应",
-    "template_id": "CROSS_CULTURE_001",
+    "template_id": "跨文_004",
     "item_skeleton": "你作为{{Industry}}公司某跨国并购项目的负责人，正在实施收购{{Company_B}}。两家公司的文化差异很大：{{Company_A}}更看重的是员工对公司价值观的认同；{{Company_B}}尊重组织内每一个成员的尊严和权利。{{Company_A}}实行的是严格的管理制度；{{Company_B}}注重业务精益求精，但决策与市场反应速度不如{{Company_A}}。由于二者文化的巨大差异，并购早期，{{Company_A}}派驻到海外的员工都感觉到无法参与到{{Company_B}}当地业务管理中的尴尬。你作为该项目负责人会做出何种反应？",
     "options_skeleton": {
       "A": {
@@ -2977,7 +2977,7 @@
   },
   {
     "dimension": "跨文化适应",
-    "template_id": "template_cross_cultural_001",
+    "template_id": "跨文_005",
     "item_skeleton": "某公司的总部位于{{Headquarters_Country}}，在{{Subsidiary_Country}}有一家分公司。{{Subsidiary_Country}}人普遍认为{{Subsidiary_Cultural_Trait}}是天经地义的事，于是总部抽调一名{{Expatriate_Manager_Nationality}}前往{{Subsidiary_Country}}担任{{Role}}，希望分公司运用{{Proposed_Management_Style}}的管理方式。该经理从总部请来专家对{{Local_Leaders}}进行培训，教他们如何{{Participatory_Method}}。结果新的管理方式推行不久，员工纷纷要求辞职。现在总部派你作为{{Your_Role}}，协助解决这个问题，你该如何解决？",
     "options_skeleton": {
       "A": {
@@ -3001,7 +3001,7 @@
   },
   {
     "dimension": "目标设定",
-    "template_id": "SJT_001",
+    "template_id": "目标_001",
     "item_skeleton": "你是一名团队负责人，准备带领团队制定下半年的具体目标。过去你的做法是召集中层管理者，先拆解总体目标分配给各个子团队。但你发现很多团队成员对于自己要达成的目标并不明确，难以落实到具体行动上。因此你希望打破自上而下的方式，动员团队成员自主制定自己的行动计划。你先和几位中层管理者明确了关键目标及思路，下一步你准备如何帮助团队成员制定行动计划？",
     "options_skeleton": {
       "A": {
@@ -3025,7 +3025,7 @@
   },
   {
     "dimension": "目标设定",
-    "template_id": "SJT_Template_001",
+    "template_id": "目标_002",
     "item_skeleton": "你是{{Department}}的负责人，你的团队在本季度承接了一项大型的跨部门合作项目，需要协调多个团队共同完成。你主动和这些团队的负责人进行了沟通，希望能够共同讨论、拆解关键目标，而他们均表示由你来主导这个项目，自己团队将积极配合你的工作。面对这种情况，你将如何分解这个项目的目标并制定计划？",
     "options_skeleton": {
       "A": {
@@ -3049,7 +3049,7 @@
   },
   {
     "dimension": "目标设定",
-    "template_id": "SJT_TEMPLATE_001",
+    "template_id": "目标_003",
     "item_skeleton": "{{Name}}是{{Department}}的负责人，在一段时间离开后回归，发现团队结构发生变动，原有成员中有离职，也有新人加入。现在团队接到一个{{紧急任务}}，之前由{{关键成员}}牵头，但该成员正在{{准备离职/转岗}}。面对这种情况，{{Name}}应该如何分配工作？",
     "options_skeleton": {
       "A": {
@@ -3073,7 +3073,7 @@
   },
   {
     "dimension": "目标设定",
-    "template_id": "T001",
+    "template_id": "目标_004",
     "item_skeleton": "你是某团队的负责人，一直被团队目标的问题困扰。上级给到的目标非常不明确，属于理念层面，往往拆分到本团队只是业务目标，而任何的业务指标都需要各方协同去推动。面对这种情况，你打算怎么做？",
     "options_skeleton": {
       "A": {
@@ -3097,7 +3097,7 @@
   },
   {
     "dimension": "情绪管理",
-    "template_id": "SJT_EM_01",
+    "template_id": "情绪_001",
     "item_skeleton": "你因工作出色被提拔到{{New_Position}}。你觉得这里的同事工作能力很强，自己的工作也不像原来那么得心应手，甚至还出过一些小错误，使得同事和领导对你的印象不是太好。这时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3121,7 +3121,7 @@
   },
   {
     "dimension": "情绪管理",
-    "template_id": "SJT_EM_001",
+    "template_id": "情绪_002",
     "item_skeleton": "你是{{Department}}的项目负责人，和团队成员一起完成一个重要的{{Business_Action}}。在项目的前期讨论会上，同事{{Name}}对你之前精心准备的方案提出了质疑，当你详细解释时却被他打断，你观察到他没有认真倾听还不时表现出轻蔑的表情，接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3145,7 +3145,7 @@
   },
   {
     "dimension": "情绪管理",
-    "template_id": "SJT_EM_001",
+    "template_id": "情绪_003",
     "item_skeleton": "最近你因为工作上的{{Pressure_Source}}（如过多琐碎事务）导致精力分散，原本计划的{{Work_Task}}迟迟未能启动。你发现自己在处理工作时不时会遗漏事项，并且回到家后容易因为{{Family_Interaction}}（如小事）与家人发生争执。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3169,7 +3169,7 @@
   },
   {
     "dimension": "情绪管理",
-    "template_id": "SJT_T01",
+    "template_id": "情绪_004",
     "item_skeleton": "你作为{{Name}}被提拔到{{Department}}任职，但新部门的同事业务能力都非常突出，且大多有优质背景。高压之下导致自己工作频频出错，被上级多次点名批评，同事们在背后议论纷纷，认为你的能力不能胜任。面对这种情况，你会怎么办？",
     "options_skeleton": {
       "A": {
@@ -3193,7 +3193,7 @@
   },
   {
     "dimension": "情绪管理",
-    "template_id": "SJT_EM_01",
+    "template_id": "情绪_005",
     "item_skeleton": "近期由于{{Industry}}业务需要，你被安排到另一个城市负责{{Business_Action}}。在你连续高强度工作一段时间后，终于迎来短暂的假期，身心俱疲的你打算好好休息。就在这时，公司告诉你有一个{{Client_Type}}客户反馈出现紧急问题，需要你赶去处理。但这个客户本就不是你负责的，而且之前类似的情况你都没有得到过任何认可和奖励。面对这种情况，你会怎么办？",
     "options_skeleton": {
       "A": {
@@ -3217,7 +3217,7 @@
   },
   {
     "dimension": "团队凝聚",
-    "template_id": "SJT_TEAM_001",
+    "template_id": "团队_004",
     "item_skeleton": "你是公司一个{{Department}}的负责人。为了提高效率，你的团队打算开展一个{{Project_Type}}项目。但团队中只有少数{{Senior_Role}}，工作繁忙，无法持续跟进此项目。其他成员面对任务缺乏明确的工作方向，而且在遇到难题时也需要有人能够提供相关指导。作为团队负责人，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3241,7 +3241,7 @@
   },
   {
     "dimension": "团队凝聚",
-    "template_id": "T001",
+    "template_id": "团队_005",
     "item_skeleton": "公司近期新员工剧增，新老员工在工作配合中出现了一些问题。为了增强员工的凝聚力，公司已采取了{{Communication_Measure}}（如开办刊物、定期交流会议等），但收效甚微。作为领导，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3265,7 +3265,7 @@
   },
   {
     "dimension": "持续优化",
-    "template_id": "SJT_OPTIMIZE_001",
+    "template_id": "持续_001",
     "item_skeleton": "你在公司的{{Department}}，负责所有相关审批工作。近期有一些{{Another_Department}}的同事向你抱怨：因审批的条目繁琐、流程时间长，导致业务卡在关键时期无法继续推进，最后不得不延期上线。经了解发现，上述情况是由于{{Another_Department}}同事准备材料周期过长，给{{Department}}剩下的时间根本不够完成正常的审批流程，才导致了拖延。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3289,7 +3289,7 @@
   },
   {
     "dimension": "授权",
-    "template_id": "auth_01",
+    "template_id": "授权_001",
     "item_skeleton": "某公司{{Role}}正埋头苦干，桌上文件堆积如山，电话铃声不断，下属频繁敲门请示，秘书不断送来文件、报告要求批示签字，此外还要准备各种会议。与此同时，隔壁办公室里十来个下属却悠闲地翻文件夹、看报纸、聊天、上网。对于管理者来说，进行授权的直接原因在于什么？",
     "options_skeleton": {
       "A": {
@@ -3313,7 +3313,7 @@
   },
   {
     "dimension": "授权",
-    "template_id": "SJT_TMP_001",
+    "template_id": "授权_002",
     "item_skeleton": "某公司{{Leader}}正忙得不可开交，桌上堆满待处理的文件，电话不断响起，下属频繁敲门请示，秘书不断送来报告要求批示，还需准备各种会议。与此同时，隔壁办公室的{{Subordinates}}却无所事事，翻文件、看报纸、聊天、上网。如果你是该领导的上级，你打算给他一些建议，你觉得下列哪一项建议最不可取？",
     "options_skeleton": {
       "A": {
@@ -3337,7 +3337,7 @@
   },
   {
     "dimension": "授权",
-    "template_id": "AUTH-001",
+    "template_id": "授权_003",
     "item_skeleton": "某公司的{{上级角色}}因{{原因}}，安排{{下属角色}}代替自己主持{{关键业务活动}}。但由于{{下属角色}}经验不足，在活动中考虑欠周，致使活动失败。在组织中，管理者应该如何看待授权？",
     "options_skeleton": {
       "A": {
@@ -3361,7 +3361,7 @@
   },
   {
     "dimension": "授权",
-    "template_id": "SJT_Auth_001",
+    "template_id": "授权_004",
     "item_skeleton": "某单位{{Leader}}因临时有事，安排{{Subordinate}}代替自己主持{{Important_Business_Activity}}。但由于{{Subordinate}}经验不足，在{{Important_Business_Activity}}中考虑欠周，致使{{Failure}}。如果你是{{Leader}}，此时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3385,7 +3385,7 @@
   },
   {
     "dimension": "授权",
-    "template_id": "AUTH_001",
+    "template_id": "授权_005",
     "item_skeleton": "{{Manager}}正忙于处理大量{{Routine_Work}}（如批阅文件、接听电话、回应下属请示、准备会议等），而隔壁办公室的{{Subordinates}}却显得十分悠闲（如翻文件夹、看报、聊天、上网）。请问以下哪项工作不宜交由{{Subordinates}}来处理？",
     "options_skeleton": {
       "A": {
@@ -3409,7 +3409,7 @@
   },
   {
     "dimension": "人际敏感",
-    "template_id": "SJT-001",
+    "template_id": "人际_001",
     "item_skeleton": "{{Name}}是{{Department}}的核心员工之一，工作能力很强。一天，{{Name}}找领导谈话，告诉领导他报名参加了{{Industry}}某单位的{{Role}}竞聘，且已经通过筛选，进入最终环节，近日该单位人事部门工作人员将来你司对{{Name}}进行考察，并希望组织非正式会谈向{{Name}}的同事了解他的情况。你认为，此时领导应该怎么做？",
     "options_skeleton": {
       "A": {
@@ -3433,7 +3433,7 @@
   },
   {
     "dimension": "人际敏感",
-    "template_id": "SJT_001",
+    "template_id": "人际_002",
     "item_skeleton": "{{Department}}两年前上任一位{{Leader}}，却一直没有组织过大规模的{{Business_Action}}活动，最近{{Superior}}接到一些{{Stakeholder}}的反馈，认为{{Department}}的工作做得不到位，希望能够迅速开展起来。作为{{Department}}的工作人员，你认为首先应该怎么做？",
     "options_skeleton": {
       "A": {
@@ -3457,7 +3457,7 @@
   },
   {
     "dimension": "人际敏感",
-    "template_id": "SJT_001",
+    "template_id": "人际_003",
     "item_skeleton": "在{{Context}}结束后，一直没有发言的{{Name}}迟疑地对领导说：“有些想法我本来不想说，但又觉得作为领导你应该知道……”如果你是领导，你应该对{{Name}}说什么？",
     "options_skeleton": {
       "A": {
@@ -3481,7 +3481,7 @@
   },
   {
     "dimension": "人际敏感",
-    "template_id": "SJT_002",
+    "template_id": "人际_004",
     "item_skeleton": "{{Subordinate}}向{{Manager}}提出一项有利于提高{{Department}}工作效率的{{Suggestion}}，而这个建议与{{Manager}}近来长时间考虑的方案比较相似。如果你是{{Manager}}，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3505,7 +3505,7 @@
   },
   {
     "dimension": "人员配置",
-    "template_id": "SJT-001",
+    "template_id": "人员_001",
     "item_skeleton": "通过一段时间的观察，你发现团队中的{{Name}}不仅自己工作完成得很好，还常常主动帮助{{Department}}的同事分担任务，并且在团队的紧急工作中勇于承担责任，愿意承担更多的工作，其抗压能力和自我调适能力在多次任务中得到体现。现在你需要对部门季度工作进行任务分解，针对{{Name}}你会如何安排？",
     "options_skeleton": {
       "A": {
@@ -3529,7 +3529,7 @@
   },
   {
     "dimension": "人员配置",
-    "template_id": "T001",
+    "template_id": "人员_002",
     "item_skeleton": "你团队中有位成员{{Name}}最近多次来找你讨论晋升的问题。你通过与其他员工沟通发现：他总想在工作中起到主导作用，很少听取他人意见，因此和团队其他成员相处不好。这种情况下，如果你是团队的负责人，你打算如何做？",
     "options_skeleton": {
       "A": {
@@ -3553,7 +3553,7 @@
   },
   {
     "dimension": "人员配置",
-    "template_id": "SJT_PC_001",
+    "template_id": "人员_003",
     "item_skeleton": "某{{Department}}对员工的{{Professional_Knowledge}}要求很高。由于公司最近业务调整，导致该部门在人岗匹配上出现了问题。目前该部门人员队伍的现状是：（1）具备丰富{{Management_Experience}}的资深管理者，年资很高，但缺乏{{Professional_Knowledge}}；（2）年轻的工作人员，有很多创新的想法，学历和能力都很高，但{{Professional_Knowledge}}不太吻合。要改革该部门人员队伍状况，你认为当前最紧迫的任务是哪项？",
     "options_skeleton": {
       "A": {
@@ -3577,7 +3577,7 @@
   },
   {
     "dimension": "人员配置",
-    "template_id": "TMP-001",
+    "template_id": "人员_004",
     "item_skeleton": "近期，你所属的{{Team}}中一名{{Core_Person}}因{{Reason_Leave}}离职。你安排{{Name}}（工作能力{{Competent}}）接替相关工作。但在后续几次会议/工作中，你发现{{Name}}过度关注细节，在全局把控/战略层面表现不佳。当前团队正处于{{Critical_Period}}，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3601,7 +3601,7 @@
   },
   {
     "dimension": "人员配置",
-    "template_id": "SJT_001",
+    "template_id": "人员_005",
     "item_skeleton": "团队里新入职了几名新员工，其中一名成员{{Name}}向你反映当前的工作内容与她的期望差别很大，心里有些落差，希望能够轮岗到本部门的其他岗位。你预期她转岗后可能会工作得更好，但是重新招人培养替代她对你的团队也是一种损失。这时，你打算怎么做？",
     "options_skeleton": {
       "A": {
@@ -3625,7 +3625,7 @@
   },
   {
     "dimension": "时间管理",
-    "template_id": "SJT_TM_001",
+    "template_id": "时间_001",
     "item_skeleton": "作为某{{Industry}}公司的{{Role}}，你每天有很多事务需要处理，同时接听大量电话，参加很多会议。面对这种情况，你会采取何种措施？",
     "options_skeleton": {
       "A": {
@@ -3649,7 +3649,7 @@
   },
   {
     "dimension": "时间管理",
-    "template_id": "TM01",
+    "template_id": "时间_002",
     "item_skeleton": "假设你是某{{Department}}的负责人，现在需要建立一个{{Target_System}}系统，你对此不甚熟悉。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3673,7 +3673,7 @@
   },
   {
     "dimension": "时间管理",
-    "template_id": "SJT_TM_001",
+    "template_id": "时间_003",
     "item_skeleton": "{{Name}}每天都会收到大量的{{工作材料/信息}}，为了避免遗忘，他将材料全部放在{{办公区域}}，导致材料堆积如山，经常需要花大量时间翻找。为了避免以上情况，你认为，{{Name}}应该如何做？",
     "options_skeleton": {
       "A": {
@@ -3697,7 +3697,7 @@
   },
   {
     "dimension": "时间管理",
-    "template_id": "001",
+    "template_id": "时间_004",
     "item_skeleton": "{{Name}}作为{{Department}}负责人，在完成{{Routine_Tasks}}的同时还需要处理各种{{Unplanned_Tasks}}。这种情况经常影响{{Routine_Tasks}}的完成，为此他不得不{{Extra_Work}}。为了改变这种状况，你认为，{{Name}}应该如何做？",
     "options_skeleton": {
       "A": {
@@ -3721,7 +3721,7 @@
   },
   {
     "dimension": "时间管理",
-    "template_id": "TM_001",
+    "template_id": "时间_005",
     "item_skeleton": "你需要完成一项{{Business_Action}}任务（例如撰写报告），该任务需要约{{Hours}}小时完成，截止日期在{{Days}}天后。面对这种情况，你会如何完成这项任务？",
     "options_skeleton": {
       "A": {
@@ -3745,7 +3745,7 @@
   },
   {
     "dimension": "识别机会",
-    "template_id": "OPP_01",
+    "template_id": "识别_001",
     "item_skeleton": "目前国内{{Industry}}行业发展迅速，是最有前景的新兴产业之一。由于行业业务体系相较国外发展滞后，各大{{Competitors}}都看好这块空白市场，希望与行业内{{Target_Customers}}建立战略合作关系，竞争非常激烈。为此，你需要综合多方面的信息，制定策略，快速抢占市场。面对这种情况，你认为以下哪方面的信息最为核心？",
     "options_skeleton": {
       "A": {
@@ -3769,7 +3769,7 @@
   },
   {
     "dimension": "识别机会",
-    "template_id": "T_识别机会_01",
+    "template_id": "识别_002",
     "item_skeleton": "你所在的{{Team}}计划与{{Partner}}合作，推出一个新的{{Service}}。调研发现，市场对此项业务有很大的需求，但由于利润较低的问题，类似公司很少推出类似的业务。你认为以下哪类信息最有利于你明确发展方向，做出长期规划？",
     "options_skeleton": {
       "A": {
@@ -3793,7 +3793,7 @@
   },
   {
     "dimension": "识别机会",
-    "template_id": "SJT_001",
+    "template_id": "识别_003",
     "item_skeleton": "你是一个{{Team}}的负责人。目前{{Technology}}是{{Industry}}发展的大趋势，为了在行业中抢占领先位置，{{Superior}}希望你们团队将{{Technology}}应用到您熟悉的{{Project}}中，并让您先提出规划建议。调研发现，业内大部分{{Industry_Companies}}以该技术为噱头，并没有实质上的应用，很难找到有参考价值的{{Case}}。面对这种情况，你会如何建议？",
     "options_skeleton": {
       "A": {
@@ -3817,7 +3817,7 @@
   },
   {
     "dimension": "识别机会",
-    "template_id": "SJT_001",
+    "template_id": "识别_004",
     "item_skeleton": "你是{{Department}}的负责人，负责{{Organization}}的{{Business_Action}}工作。核心工具/技术一直依赖外部供应（如国外供应商），由于外部环境不稳定（如国际局势、政策变化），该供应受到很大影响。同时，国内没有成熟的替代方案（如标准化技术或行业标准），短时间内难以找到替代品。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3841,7 +3841,7 @@
   },
   {
     "dimension": "识别机会",
-    "template_id": "SJT_OPP_001",
+    "template_id": "识别_005",
     "item_skeleton": "你负责的{{部门}}为多个{{项目团队}}提供{{支持服务}}。这些项目团队的负责人大多比较年轻，经验有限。在协作过程中，有些团队需求过于庞杂，梳理不清；有些团队在提出需求时考虑不够完善；有些团队的产品功能还在探索阶段，需求频繁变动，导致相应的支持方案需要经常调整，甚至推倒重来。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3865,7 +3865,7 @@
   },
   {
     "dimension": "决策判断",
-    "template_id": "SJT_001",
+    "template_id": "决策_003",
     "item_skeleton": "某{{Industry}}企业{{Company}}为改变经营亏损状况，计划与国际知名{{Partner_Company}}合作发展{{Product_Type}}生产。{{Partner_Company}}技术先进，产品质量好、成本低。{{Company}}认为随着经济发展和消费水平提升，该项目具有广阔市场前景，并参照国外同等标准推算出需求量。有关投资机构认为此发展战略还缺乏一些关键依据，你认为以下哪一条可以视为“关键依据”？",
     "options_skeleton": {
       "A": {
@@ -3889,7 +3889,7 @@
   },
   {
     "dimension": "决策判断",
-    "template_id": "T001",
+    "template_id": "决策_004",
     "item_skeleton": "据了解，某外资企业{{Foreign_Company}}在之前与国内企业{{Domestic_Company_A}}的合作中，由于缺乏跨文化管理经验，导致合作被迫中断。但由于{{Foreign_Company}}资金力量雄厚，国内某大型企业{{Company_S}}仍计划与{{Foreign_Company}}建立合作。{{Company_S}}的高层领导做了大量艰苦的前期准备工作，以下哪种做法最利于实现合作？",
     "options_skeleton": {
       "A": {
@@ -3913,7 +3913,7 @@
   },
   {
     "dimension": "推动执行",
-    "template_id": "SJT_001",
+    "template_id": "推动_001",
     "item_skeleton": "你是公司刚刚上任的{{Department}}负责人，为配合集团和公司发展战略，你牵头制定了公司{{Business_Action}}计划。为了能更好地监控计划的执行，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3937,7 +3937,7 @@
   },
   {
     "dimension": "推动执行",
-    "template_id": "1",
+    "template_id": "推动_002",
     "item_skeleton": "你是某个项目团队的负责人，最近你们在推出一项新研发的{{Project}}，这个项目是公司今年的重点项目，因此公司{{Leadership}}都特别重视，对进度的把控也十分严格。目前，该项目已经进入后期验收的阶段。在对系统进行运行检测的时候发现一处可能存在{{Issue}}，需要进行全面排查。原定日期临近，接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -3961,7 +3961,7 @@
   },
   {
     "dimension": "推动执行",
-    "template_id": "SJT_PUSH_001",
+    "template_id": "推动_003",
     "item_skeleton": "你刚刚承接了一个紧急任务，要求在短时间内完成。由于工期紧任务重，上级从多个{{Department}}抽调了{{Number}}人来协助你，由你来负责整个项目的协调推进工作。这些人员大多不属于你直接管辖，而且各项具体工作之间存在先后关系，不能并行完成。你计划如何推动任务进展？",
     "options_skeleton": {
       "A": {
@@ -3985,7 +3985,7 @@
   },
   {
     "dimension": "推动执行",
-    "template_id": "TMP001",
+    "template_id": "推动_004",
     "item_skeleton": "由于业务扩大，你的团队与其他团队合并，短时间内团队人数由{{Small_Team_Size}}扩充到{{Large_Team_Size}}。随着业务的推进，你发现这些员工仍保持着原先团队的工作模式和习惯，与现有团队成员的磨合并不好。目前一项紧急任务正处于团队攻坚期，但团队磨合的问题严重影响着任务的进度。面对这种情况，你打算怎么办？",
     "options_skeleton": {
       "A": {
@@ -4009,7 +4009,7 @@
   },
   {
     "dimension": "推动执行",
-    "template_id": "SJT_TMP_001",
+    "template_id": "推动_005",
     "item_skeleton": "你是一个{{Team}}的负责人，最近刚推出了一款{{Product}}。投入市场一段时间后，有客户反映在使用该{{Product}}时常出现{{Problem}}等问题。{{Team}}的一线技术人员去现场维修后虽然{{Product}}能正常运作，但据他们反映，也说不清目前的技术问题究竟出在何处。随着{{Product}}订单的不断增加，可能出现的隐患也越来越大，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4033,7 +4033,7 @@
   },
   {
     "dimension": "同理心",
-    "template_id": "T_EMP_001",
+    "template_id": "同理_001",
     "item_skeleton": "你和团队的其他成员正在紧张地准备一项{{important_task}}。在此过程中，你发现负责{{key_role}}的{{colleague}}开始变得{{overly_anxious}}，即使在{{practice}}中也表现得非常紧张、语无伦次。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4057,7 +4057,7 @@
   },
   {
     "dimension": "同理心",
-    "template_id": "SJT-EMP-001",
+    "template_id": "同理_002",
     "item_skeleton": "今天快下班的时候，你正在收拾东西准备回家，这时新来的同事{{New_Colleague}}找到你说她的{{Work_Product}}没有做好，领导非常生气，但是明天就要交了，希望你可以帮她一下。在这种情况下你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4081,7 +4081,7 @@
   },
   {
     "dimension": "同理心",
-    "template_id": "T001",
+    "template_id": "同理_003",
     "item_skeleton": "最近，{{Department}}的业务发生了一些调整，你负责的{{Project_Group}}工作重点由{{Old_Focus}}转向{{New_Focus}}，在你看来这个变化是有前景的。但是有两位{{Team_Members}}向你提出了辞职，原因是他们对{{New_Focus}}不感兴趣。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4105,7 +4105,7 @@
   },
   {
     "dimension": "同理心",
-    "template_id": "SJT_EMP_001",
+    "template_id": "同理_004",
     "item_skeleton": "你最近从{{PreviousCompany}}跳槽到{{CurrentCompany}}，从事与之前一样的{{Business_Action}}工作。入职后你负责了一个{{Project}}，这类项目你之前在{{PreviousCompany}}就有丰富的经验，所以你很快就厘清了整体的工作思路。在项目组会上，你将相应的工作安排告知其他成员后，有人表示他们之前从未接触过这样的方式，因此存在很大疑虑，此时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4129,7 +4129,7 @@
   },
   {
     "dimension": "同理心",
-    "template_id": "SJT_EMP_001",
+    "template_id": "同理_005",
     "item_skeleton": "{{Name}}是从其他部门转岗来的新同事，因为不太熟悉新部门的{{Business_Process}}，最近几天经常耽误流程的审批，导致你的工作也受到影响，{{Name}}跟你解释刚开始学习不是很熟悉，对此你会作何反应？",
     "options_skeleton": {
       "A": {
@@ -4153,7 +4153,7 @@
   },
   {
     "dimension": "持续优化",
-    "template_id": "OPT_001",
+    "template_id": "持续_002",
     "item_skeleton": "你是一名{{小组类型}}的{{角色}}，最近公司开展了一个重大项目，负责人发现项目进展缓慢，决定增派人手，把你们小组调入该项目组中帮忙分担{{业务工作}}。工作了一段时间后，你的组员向你反映在该项目组中收到的{{工作输入}}经常存在错误，并且你们小组与他们的{{工作}}经常存在重叠，此时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4177,7 +4177,7 @@
   },
   {
     "dimension": "持续优化",
-    "template_id": "SJT_CO_001",
+    "template_id": "持续_003",
     "item_skeleton": "你是某大型{{Industry}}公司的{{Role}}，该公司新兴业务是{{Business_Field}}。近期，公司新推出的{{Product}}销售额低于预期，对公司收入造成了极大的不利影响。目前，{{Department}}正在积极探讨如何重获市场客户喜好并提高公司整体收入。你认为以下哪一个选项最有效的方式？",
     "options_skeleton": {
       "A": {
@@ -4201,7 +4201,7 @@
   },
   {
     "dimension": "持续优化",
-    "template_id": "1",
+    "template_id": "持续_004",
     "item_skeleton": "{{Company}}是所属行业的领先企业，但公司的某些{{Position_Type}}岗位空缺率连续几年处于较高水平，如果长此以往，将阻碍公司的发展。经分析发现，这主要是因为招聘部门招不到人，用人部门留不住人。公司曾尝试通过提高该岗位的{{Compensation}}来解决问题，但效果并不明显，还增加了人力成本。你作为人力资源部门负责人，最有可能采取以下哪种措施？",
     "options_skeleton": {
       "A": {
@@ -4225,7 +4225,7 @@
   },
   {
     "dimension": "持续优化",
-    "template_id": "SJT_OPT_001",
+    "template_id": "持续_005",
     "item_skeleton": "你是某公司的{{Role}}。公司最近推行了一个新的{{New_System}}，用于整合各项流程。一段时间后，许多{{Department}}的员工向你反映难以适应新系统，觉得效率反而降低了。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4249,7 +4249,7 @@
   },
   {
     "dimension": "大局意识",
-    "template_id": "SJT_001",
+    "template_id": "大局_001",
     "item_skeleton": "最近公司计划抽调一批核心人员组成临时项目组，开展一项具有市场前景的新业务。公司十分重视该新业务，临时项目组是否会变成固定部门尚未得知。你的部门主要负责公司某项现有核心业务，拥有较多骨干，目前正在为现有业务做优化升级。作为部门负责人，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4273,7 +4273,7 @@
   },
   {
     "dimension": "大局意识",
-    "template_id": "SJT_TEMPLATE_001",
+    "template_id": "大局_002",
     "item_skeleton": "你是公司的一名{{Role}}，最近你加入了公司的一个{{Department}}项目组，项目经理组织你和其他几名新入职员工一起讨论工作内容。你发现其他新员工对于专业认知有很多误区，导致提出的一些方案可行性低。你最近时间很紧张，这种情况下你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4297,7 +4297,7 @@
   },
   {
     "dimension": "大局意识",
-    "template_id": "SJT_01",
+    "template_id": "大局_003",
     "item_skeleton": "在一次{{Meeting_Context}}后，{{Department_Y}}的主管指出，因为你们{{Department_X}}的员工在这次{{Project}}中的表现不佳，导致项目进展十分缓慢。但你了解到是{{Department_Y}}的员工经常把一些本属于他们部门的任务交给你们部门来做，导致你们部门的员工因为负担过重使得任务无法完成。项目截止时间快到了，如果你是{{Department_X}}的主管，接下来会怎么跟{{Department_Y}}的主管沟通？",
     "options_skeleton": {
       "A": {
@@ -4321,7 +4321,7 @@
   },
   {
     "dimension": "大局意识",
-    "template_id": "SJT_DJ_001",
+    "template_id": "大局_004",
     "item_skeleton": "{{Team_A}}团队和{{Team_B}}团队同属于公司的{{Department}}部门，公司会根据团队的{{Business_Metric}}（如业绩和客户反馈）进行年终评优。作为{{Team_A}}团队的一员，你发现{{Team_B}}团队某位成员在与客户的工作对接中存在疏忽，可能会收到客户投诉，从而影响整体考核评价。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4345,7 +4345,7 @@
   },
   {
     "dimension": "大局意识",
-    "template_id": "SJT_TEMPLATE_001",
+    "template_id": "大局_005",
     "item_skeleton": "你所在的{{Department}}最近接手了一个重大项目，领导让每个人分别负责其中一个部分。在提交项目方案的前一周，领导临时去外地出差，让你们在他回来之前完成方案的编写。某日，部门的两名成员因意见不合发生了争吵，致使方案的编写一度进展缓慢。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4369,7 +4369,7 @@
   },
   {
     "dimension": "服务意识",
-    "template_id": "T001",
+    "template_id": "服务_002",
     "item_skeleton": "你是{{Industry}}公司{{Department}}部门的{{Role}}，被派去在交流会的展台处{{Business_Action}}。一个四处闲逛的人看到了你们的展台，向你好奇地询问起一款{{Product}}的用途。在介绍过程中，你发现这位客户对{{Industry}}产品完全没有概念。面对他不断的提问，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4393,7 +4393,7 @@
   },
   {
     "dimension": "服务意识",
-    "template_id": "SJT-SA-001",
+    "template_id": "服务_003",
     "item_skeleton": "最近领导带着你和几位同事在外地为{{外部部门/单位}}进行{{业务培训}}。下午{{时间}}培训结束后，有一些参加培训的员工围坐在一起翻阅培训材料，看起来有些苦恼。你现在时间比较空闲，但还有些工作要做，并且在{{另一个时间}}还有一个较为重要的{{社交活动}}。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4417,7 +4417,7 @@
   },
   {
     "dimension": "服务意识",
-    "template_id": "SJT_SA_001",
+    "template_id": "服务_004",
     "item_skeleton": "你负责公司{{Industry}}领域某{{Product_Type}}（需要较长时间才能展现效果）的售后服务。今天一位客户向你反映，使用了一段时间后效果不佳，希望能退掉该产品。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4441,7 +4441,7 @@
   },
   {
     "dimension": "服务意识",
-    "template_id": "SJT_SVC_001",
+    "template_id": "服务_005",
     "item_skeleton": "你是{{Company}}的{{Department}}{{Role}}，主要工作职责是负责解决客户关于{{Service}}的售后问题。今天你收到了一位客户的留言，客户表示他在{{System}}上预约了{{Service_Request}}但一直没有工作人员按约定联系他，已经等了好几天。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4465,7 +4465,7 @@
   },
   {
     "dimension": "关系维系",
-    "template_id": "SJT_REL_001",
+    "template_id": "关系_001",
     "item_skeleton": "假如你是{{Industry}}公司的一名{{Role}}，现在有几家{{Department}}的采购商一起到你们公司进行访问考察。领导安排你来接待来访人员，带领他们参观了解公司。在讲解过程中，有一位来访人员对你的讲解称赞有加。参访结束后，你会如何选择？",
     "options_skeleton": {
       "A": {
@@ -4489,7 +4489,7 @@
   },
   {
     "dimension": "关系维系",
-    "template_id": "SJT_REL_001",
+    "template_id": "关系_002",
     "item_skeleton": "假如你是某{{Industry}}公司的{{Role}}，现在你受邀去行业会议进行分享。会后有几位外部人员感兴趣，有问题想要询问你，但此时助理表示公司还有个临时会议等你参加。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4513,7 +4513,7 @@
   },
   {
     "dimension": "关系维系",
-    "template_id": "SJT_REL_001",
+    "template_id": "关系_003",
     "item_skeleton": "你是公司某个{{Department}}的{{Role}}，你们团队与{{Industry}}客户的项目合作十分成功，双方都很满意。项目结束后，客户向你提起他们公司关于本项目的庆祝/社交活动，并邀请你们团队一同前往，但近期团队工作比较忙碌。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4537,7 +4537,7 @@
   },
   {
     "dimension": "关系维系",
-    "template_id": "T001",
+    "template_id": "关系_004",
     "item_skeleton": "最近你报名参加了一个{{Event}}，希望借此提升自身能力。在{{Event}}中，你发现有许多之前认识的{{Relationship}}，但之前没有过多的接触。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4557,7 +4557,7 @@
   },
   {
     "dimension": "关系维系",
-    "template_id": "T_REL_001",
+    "template_id": "关系_005",
     "item_skeleton": "你们公司将今年的{{活动类型}}安排在外地举行，要求总部和分公司的员工都要参加。在主要议程结束后，活动负责人告知大家，接下来到下一个环节开始前有{{时间段}}可以自由活动。此时，很多员工抱团聊天，还有一些员工选择独自行动。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4581,7 +4581,7 @@
   },
   {
     "dimension": "绩效评估",
-    "template_id": "SJT_PA_001",
+    "template_id": "绩效_003",
     "item_skeleton": "你是{{Department}}的{{Role}}，最近正为下属们的年终绩效考核犯愁。由于今年年中上级领导换届，新领导调整了原来的绩效评估方式，新增了几项待完善的考核指标。你发现下属们在新指标的完成情况都不佳，而按照原来的绩效评估标准，下属们都不错，甚至有人能成为最优。在评价下属们的年终绩效时，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4605,7 +4605,7 @@
   },
   {
     "dimension": "绩效评估",
-    "template_id": "SJT_PE_001",
+    "template_id": "绩效_004",
     "item_skeleton": "最近公司接手了一个{{Projects}}，时间紧，任务重。因而领导表示在项目完成后，会根据绩效给大家发放奖金，并让{{Role}}带领团队尽快投入工作，在项目结束时提交员工的绩效结果，绩效要能够体现员工在工作过程中的投入和贡献。假如你是该{{Role}}，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4629,7 +4629,7 @@
   },
   {
     "dimension": "绩效评估",
-    "template_id": "PERF_001",
+    "template_id": "绩效_005",
     "item_skeleton": "你是某团队的{{管理者角色}}。某天上级领导告诉你，团队本周期业绩较好，因此打算为成员发放奖励，并要求你提供团队成员在此周期的绩效排名。按照公司规定，成员的绩效由{{权重A}}和{{权重B}}两部分组成，前者与团队直接业绩密切相关，后者并不直接影响团队业绩。你会如何对团队成员进行绩效排名？",
     "options_skeleton": {
       "A": {
@@ -4653,7 +4653,7 @@
   },
   {
     "dimension": "结果导向",
-    "template_id": "TMP-SJT-001",
+    "template_id": "结果_003",
     "item_skeleton": "你是{{Company}}的{{Department}}的{{Role}}，目前你们正在和其他两家同业公司竞争一位客户，这位客户是您主要负责的，是公司本年度战略侧重行业的头部客户。据之前经验，在这三家公司中，你们公司无论是{{Product_Quality}}还是{{Service_Quality}}上都具有较强的优势，你们的{{Proposal}}已经写好。再过三天你们要参加客户的{{Bidding_Event}}，接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4677,7 +4677,7 @@
   },
   {
     "dimension": "结果导向",
-    "template_id": "SJT_RE_001",
+    "template_id": "结果_004",
     "item_skeleton": "你是公司{{Department}}的{{Role}}，最近上级临时分配给你一个紧急项目，由你牵头负责。由于项目规模较大，客户每次反馈后都需要做大量修改。你紧急抽调了几个人一起做，但过了两星期，项目组成员纷纷表示忙不过来，耽误了自己负责的其他工作进展。三天后就要交稿了，还有大量项目工作需要处理，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4701,7 +4701,7 @@
   },
   {
     "dimension": "结果导向",
-    "template_id": "SJT_002",
+    "template_id": "结果_005",
     "item_skeleton": "你作为一家{{Industry}}公司的{{Role}}，正负责一个重要{{Client}}的项目。该{{Client}}要求在短时间内按极高的标准交付{{Business_Action}}，并在{{Business_Action}}快交付时修改了要求。这给项目组造成了极大的困难和额外的工作量，同时导致有成员未能按时交付工作任务。接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4725,7 +4725,7 @@
   },
   {
     "dimension": "决策判断",
-    "template_id": "SJT_DEC_001",
+    "template_id": "决策_005",
     "item_skeleton": "在{{Industry_Change}}的背景下，现急需对你所在{{Department}}的{{Technology_Solution}}提出解决方案。随着讨论的深入，{{Subordinates}}对解决方案形成了{{Two_Opinions}}，各有利弊。如果你是领导，此时你会如何做？",
     "options_skeleton": {
       "A": {
@@ -4749,7 +4749,7 @@
   },
   {
     "dimension": "创新思维",
-    "template_id": "SJT_002",
+    "template_id": "创新_001",
     "item_skeleton": "{{Company}}的{{Promotional_Material}}是在{{Time}}前制作的，内容与形式已过时。为提升公司形象、吸引{{Target_Audience}}，公司决定重新制作，要求体现公司现行的{{Core_Values}}和{{Current_Staff_Spirit}}。领导任命你担任{{Project_Team}}的负责人，你最有可能采取以下哪种措施？",
     "options_skeleton": {
       "A": {
@@ -4773,7 +4773,7 @@
   },
   {
     "dimension": "创新思维",
-    "template_id": "SJT_001",
+    "template_id": "创新_002",
     "item_skeleton": "在{{Industry}}中，公司准备在旗下{{Product}}上线一系列{{Theme}}相关的{{Feature}}。在前期调研基础上，团队做了很多设计稿，但汇报后内部{{Role}}表示这些设计与其他同类产品大同小异。作为{{Product}}负责人，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4797,7 +4797,7 @@
   },
   {
     "dimension": "创新思维",
-    "template_id": "SJT_INNOV_001",
+    "template_id": "创新_003",
     "item_skeleton": "在{{Industry}}领域的{{Project}}评审过程中，评审人认为你们的{{Deliverable}}不够新颖，并提供了一个很大胆的新方向。但这个方向与你们之前遵循的原有理念完全不同。在之后的讨论中，一些团队成员认为想要获得好结果就必须按照新方向修改{{Deliverable}}，另一些团队成员则认为按新方向做相当于从头开始，费时费力且不一定能成功。作为这个{{Project}}团队的负责人，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4821,7 +4821,7 @@
   },
   {
     "dimension": "创新思维",
-    "template_id": "SJT_001",
+    "template_id": "创新_004",
     "item_skeleton": "你所在的{{Department}}新转来了一个成员{{Name}}，他有在许多不同领域工作的丰富经历，因此在部门例会上经常提出较为独特的思路和想法。今天上级要求你们完成一个{{Business_Action}}的任务，该{{Business_Action}}已经举办过多届，有成形的流程。但{{Name}}基于他的工作背景提出了另一种方案，需要推翻现有的流程来实现。新旧方案都各有优势，此时距离提交方案的截止时间已经很近，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4845,7 +4845,7 @@
   },
   {
     "dimension": "创新思维",
-    "template_id": "SJT_002",
+    "template_id": "创新_005",
     "item_skeleton": "你在某知名{{Industry}}旗下的{{Department}}工作。近期，领导指派你部门完成一项{{Business_Action}}。按照以往惯例，通常采用{{Conventional_Approach}}。新来的{{Role}}{{Name}}提出了与往年风格不同的新方案，有部门成员认为新方案可能存在{{Risk}}。作为部门负责人，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4869,7 +4869,7 @@
   },
   {
     "dimension": "耐心细致",
-    "template_id": "T001",
+    "template_id": "耐心_001",
     "item_skeleton": "你是{{Department}}的负责人，近期部门来了一名新员工，在业务上有许多不熟悉的地方。你给该员工布置了一个{{Business_Action}}报告的任务，但你发现该员工交上来的报告在开头部分的思路就存在一定问题。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4893,7 +4893,7 @@
   },
   {
     "dimension": "耐心细致",
-    "template_id": "SJT_001",
+    "template_id": "耐心_002",
     "item_skeleton": "你们公司每年都会举办一场大型{{Industry}}活动，今年将有多个参会单位。作为工作人员，你负责与参会单位对接。上级要求你编辑信息模板，尽快将活动的时间、地点等信息发给各参会单位。对此你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4917,7 +4917,7 @@
   },
   {
     "dimension": "耐心细致",
-    "template_id": "T001",
+    "template_id": "耐心_003",
     "item_skeleton": "你是{{Department}}的一名工作人员，负责{{Business_Action}}工作。适逢{{Holiday}}，每年都会在这个时候对{{Target_Group}}进行{{Activity}}，但去年有人反映没有收到{{Item}}。作为这项工作的负责人，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4941,7 +4941,7 @@
   },
   {
     "dimension": "耐心细致",
-    "template_id": "SJT_TEMPLATE_001",
+    "template_id": "耐心_004",
     "item_skeleton": "在{{Department}}中，有一名同事离职后，领导安排你在完成自身工作的同时接手该同事的工作，以确保项目继续推进。在浏览该同事交接的项目文件时，你发现文件存放混乱，某些文件中还存在格式不规范等问题。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4965,7 +4965,7 @@
   },
   {
     "dimension": "耐心细致",
-    "template_id": "SJT_001",
+    "template_id": "耐心_005",
     "item_skeleton": "{{Organization}}为你的{{Team}}购入了一批先进的{{Equipment}}，{{Supervisor}}对此较为重视，并建议你每天都仔细检查设备是否受损或出现故障。据该设备生产{{Manufacturer}}的报告，该设备在正常使用下不易受损，故障率不到{{Failure_Rate}}。作为{{Team}}的组长，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -4989,7 +4989,7 @@
   },
   {
     "dimension": "适应能力",
-    "template_id": "SJT_001",
+    "template_id": "适应_001",
     "item_skeleton": "你是{{Company_Type}}的{{Role}}，之前出色地完成了公司很多{{Familiar_Field}}的项目。由于公司近两年{{New_Field}}项目增多，领导打算安排你明年负责{{New_Field}}的项目，不再负责{{Familiar_Field}}。但是你对{{New_Field}}不怎么熟悉，对于领导的安排，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5013,7 +5013,7 @@
   },
   {
     "dimension": "适应能力",
-    "template_id": "SJT-001",
+    "template_id": "适应_002",
     "item_skeleton": "你所在的{{Organization}}在陆续进行{{Change_Type}}，有些{{Department}}被合并到其他部门中，原部门人员有较大的{{Personnel_Change}}。到目前为止，你的{{Department}}暂时未受到波及，但是{{Change_Type}}还没结束。作为{{Role}}，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5037,7 +5037,7 @@
   },
   {
     "dimension": "适应能力",
-    "template_id": "SJT_ADAPT_001",
+    "template_id": "适应_003",
     "item_skeleton": "你所在的公司里员工每{{Frequency}}就有一次转岗的机会。你原在{{PreviousDepartment}}工作，但你认为自己更适合{{NewDepartment}}，于是在某次转岗机会中主动申请到{{NewDepartment}}工作。{{NewDepartment}}的同事们都很热情，对新来的你颇为关照。但工作一段时间后你发现，{{NewDepartment}}的工作内容与{{PreviousDepartment}}有很大差异，你对新工作不了解，工作效率较低，有时还会出错。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5061,7 +5061,7 @@
   },
   {
     "dimension": "适应能力",
-    "template_id": "SJT_Adapt_001",
+    "template_id": "适应_004",
     "item_skeleton": "你在{{Industry}}公司的{{Department}}一直负责本部门与{{Department_Old}}的{{Business_Action}}对接工作。最近你被告知之后由你负责与{{Department_New}}进行对接，接触几次后你感觉整体的对接流程不太顺畅，甚至有些核心业务的对接较为混乱，经常出现差错，导致你需要做很多额外工作。临近{{Time_Pressure}}，{{Leader}}会额外关注这段时间的工作。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5085,7 +5085,7 @@
   },
   {
     "dimension": "适应能力",
-    "template_id": "SJT_001",
+    "template_id": "适应_005",
     "item_skeleton": "你是{{Department}}的一名优秀{{Role}}。近期由于{{Industry}}环境变化，{{Department}}的传统{{Business_Action}}活动出现衰退趋势。部门正在考虑将一部分员工的业务向新的{{Business_Action}}形式调整，但你从来没有接触过这种新形式。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5109,7 +5109,7 @@
   },
   {
     "dimension": "协调",
-    "template_id": "SJT_COORD_001",
+    "template_id": "协调_002",
     "item_skeleton": "在某个项目中，团队管理者将大家分成了若干个工作小组，开展不同模块的工作。你与其他两位同事被分到同一小组并担任小组长。工作中你发现这两位同事对{{关键技能}}不太熟悉，只会一些{{基础操作}}，而其他不涉及该技能的工作都能高效完成。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5133,7 +5133,7 @@
   },
   {
     "dimension": "协调",
-    "template_id": "T001",
+    "template_id": "协调_003",
     "item_skeleton": "某{{Industry}}在开展一项跨部门合作的重点项目{{Project}}，涉及多个职能部门，包括{{Departments}}。工作中，你发现各部门{{Manager}}工作风格不同，导致跨部门的沟通不及时、项目进展比较困难。作为该项目负责人{{Name}}，面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5157,7 +5157,7 @@
   },
   {
     "dimension": "协调",
-    "template_id": "SJT-001",
+    "template_id": "协调_004",
     "item_skeleton": "你是{{Department}}的{{Role}}，最近你们团队正在为一个即将交付的{{Project}}做最后的攻坚，每个人都十分重视和投入。临近交付，领导突然将你和两位骨干成员抽调至另一个紧急{{Task}}，希望能占用你们几天时间帮助解决一些技术难题。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5181,7 +5181,7 @@
   },
   {
     "dimension": "协调",
-    "template_id": "T-001",
+    "template_id": "协调_005",
     "item_skeleton": "你是公司某{{Team}}的负责人，上级给你们{{Team}}安排了一个{{Task}}任务。你与{{Team}}成员在上周商定了{{Work_Product}}的分工，决定在今天下午开会前完成所有的{{Work_Product}}收集任务并开会安排后续任务分工。有{{Team}}成员被临时调离，于是将他负责的{{Work_Product}}部分提前发送给了你。但你发现该成员收集的{{Work_Product}}较少，且未达到要求的标准，按照进度很难在开会之前完成。面对这种情况，你会怎么办？",
     "options_skeleton": {
       "A": {
@@ -5205,7 +5205,7 @@
   },
   {
     "dimension": "学习能力",
-    "template_id": "T001",
+    "template_id": "学习_001",
     "item_skeleton": "你是{{Company}}的一名{{Role}}。近期，{{Branch}}业绩不佳，领导要求你尽快帮助{{Branch}}重新制定{{Business_Action}}方案。你了解到{{Branch}}现行的方案尝试结合了新兴的{{Theory}}，但目前还没有该理论应用的案例。接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5229,7 +5229,7 @@
   },
   {
     "dimension": "学习能力",
-    "template_id": "SJT_Template_001",
+    "template_id": "学习_002",
     "item_skeleton": "前段时间，你所在的{{Department}}派某骨干员工去外地参加一项新技术培训。该技术是{{Industry}}内广泛采用的一项新技术，可以有效提高当前工作效率。该员工学成归来后，想要组织大家进行培训。领导也表示认可，并说会给大家充足的时间来学习，希望同事们都能掌握这项新技术。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5253,7 +5253,7 @@
   },
   {
     "dimension": "学习能力",
-    "template_id": "SJT_001",
+    "template_id": "学习_003",
     "item_skeleton": "你是刚入职{{Department}}的{{Role}}，今天你们部门召开了一个{{Meeting}}，讨论中你除了对一小部分{{Technical_Detail}}不太理解之外，其他部分基本都能听懂。会后部门负责人基于研讨结果确定了方案并分派了每个人的任务。你被分到的任务相对比较基础，依据现有的经验足以顺利完成。接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5277,7 +5277,7 @@
   },
   {
     "dimension": "学习能力",
-    "template_id": "SJT_001",
+    "template_id": "学习_004",
     "item_skeleton": "你是负责{{Product_A}}维护的{{Role}}之一，最近公司准备为{{Product_B}}专门建立一个{{Team_Type}}，两款产品在维护方面有一些相似之处，领导准备让你去担任{{Product_B}}的{{Leader_Role}}。你之前只是简单接触过{{Product_B}}，并未深入了解。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5301,7 +5301,7 @@
   },
   {
     "dimension": "学习能力",
-    "template_id": "T01",
+    "template_id": "学习_005",
     "item_skeleton": "你是公司{{Department}}的职员。近期，你们部门需要与一些{{Industry}}公司展开合作，领导让你负责{{Document}}撰写工作。你虽然有很多撰写类似文档的经验，但从来没有接触过{{Field}}领域。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5325,7 +5325,7 @@
   },
   {
     "dimension": "责任心",
-    "template_id": "1",
+    "template_id": "责任_003",
     "item_skeleton": "你是某公司的{{Intern}}，{{Supervisor}}让你和其他几个{{Team_Members}}一起完成一份{{Report}}，你们讨论后分工完成{{Report}}的{{Presentation}}。但在汇报时，{{Supervisor}}和其他几位领导表示你们的{{Report}}内容很不全面，还有很多{{Deficiencies}}。接下来，你打算怎么做？",
     "options_skeleton": {
       "A": {
@@ -5349,7 +5349,7 @@
   },
   {
     "dimension": "责任心",
-    "template_id": "SJT_ZZX_001",
+    "template_id": "责任_004",
     "item_skeleton": "近期，你所在的{{Department}}正在进行改革，将一个团队分成两个负责不同类型任务的{{Team}}。这天，另一个{{Team}}的负责人来寻求你的帮助，之前由你负责的一个{{Project}}出现了一些问题，但此{{Project}}以后将不再由你所在的{{Team}}负责。面对这种情况，你会怎么办？",
     "options_skeleton": {
       "A": {
@@ -5373,7 +5373,7 @@
   },
   {
     "dimension": "责任心",
-    "template_id": "SJT_RESP_001",
+    "template_id": "责任_005",
     "item_skeleton": "你是某{{Industry}}公司一名新入职的{{Role}}，近期部门要{{Business_Action}}一个新项目，该项目已经有初步的框架。领导指派你进行项目的初步调研工作，但开发周期紧迫，调研时间不能超过一周，你会如何开展工作？",
     "options_skeleton": {
       "A": {
@@ -5397,7 +5397,7 @@
   },
   {
     "dimension": "自我管理",
-    "template_id": "SJT_SM_001",
+    "template_id": "自我_004",
     "item_skeleton": "你是{{Department}}的成员，领导安排你和同事共同完成{{Task}}。领导告诉你们他要出差几天，并要求在他回来之前提交成稿。同事表示可以快速完成当前工作，然后利用剩余时间做私事。而你原本想先仔细查阅一些资料，再慢慢撰写。此时你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5421,7 +5421,7 @@
   },
   {
     "dimension": "自我管理",
-    "template_id": "SJT_SM_001",
+    "template_id": "自我_005",
     "item_skeleton": "上级最近交给了你一个任务，要求你提前了解公司最近打算开展合作的{{Client}}，并拟定出一份{{Plan}}。但由于{{Client}}还在接洽阶段，上级没有给你{{Plan}}的具体期限，只是让你按照自己的进度安排。你准备今天完成所有相关的{{Research}}工作，可能需要{{Overtime}}，但你的同事想约你提早下班去{{SocialEvent}}。面对这种情况，你会怎么办？",
     "options_skeleton": {
       "A": {
@@ -5445,7 +5445,7 @@
   },
   {
     "dimension": "遵从规范",
-    "template_id": "SJT_TMP_001",
+    "template_id": "遵从_001",
     "item_skeleton": "你们部门的大部分工作都需要大家{{Business_Action}}，且每个人{{Business_Action}}的时间视各自的工作需要而定。部门领导要求大家在无需{{Business_Action}}的时间按公司考勤要求坐班，并表示会抽查大家的坐班情况。一天，与你要好的同事{{Name}}邀请你一起去看{{Event}}，{{Event}}的时间你没有工作安排，但按规定需要坐班。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5469,7 +5469,7 @@
   },
   {
     "dimension": "遵从规范",
-    "template_id": "SJT-001",
+    "template_id": "遵从_002",
     "item_skeleton": "你是{{Department}}的一名员工，{{Department}}规定每周{{DayOfWeek}}上午{{Time}}召开例会，无故不得请假，并且需要签到。但本周例会前一天，你的领导将一项紧急任务交给你，要求你在例会当天的{{Deadline}}前完成，而该任务的工作量比你想象中要大。你了解到，本次例会的主题是各小组汇报工作进展，而你所在小组的汇报并非由你负责。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5493,7 +5493,7 @@
   },
   {
     "dimension": "遵从规范",
-    "template_id": "T001",
+    "template_id": "遵从_003",
     "item_skeleton": "你是某{{Industry}}公司的{{Department}}主管，近期有几个紧急的{{Business_Action}}项目需要尽快向{{Functional_Department}}申请资源/审批。但是{{Functional_Department}}却以缺少{{Supervisor_Role}}的签名为由拒绝。此时你的{{Supervisor_Role}}正在外地出席重要会议，他出差之前将项目事宜交由你全权负责，考虑到这些项目文件必须要{{Supervisor_Role}}签字，接下来你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5517,7 +5517,7 @@
   },
   {
     "dimension": "遵从规范",
-    "template_id": "T001",
+    "template_id": "遵从_004",
     "item_skeleton": "你是某公司刚入职的新员工，公司规定每个{{Time_Period}}要提交{{Report}}。某个{{Time_Period_End}}，领导给你发送了一些文件，要求在下班之前必须整理好发给他。但是你的{{Report}}还没有完成，你对此有些焦虑。旁边工位的一位同事私下和你说，其实{{Report}}的期限没有那么严格，很多人都在{{Later_Time}}才提交。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {
@@ -5541,7 +5541,7 @@
   },
   {
     "dimension": "遵从规范",
-    "template_id": "SJT_001",
+    "template_id": "遵从_005",
     "item_skeleton": "你负责你所在的{{Department}}的{{Task_Type}}工作，上级/相关部门要求所有{{Documents}}在{{Deadline}}之前提交。但你临近截止日期才得知这个消息，有部分{{Documents}}还没有获得{{Approval}}。面对这种情况，你会怎么做？",
     "options_skeleton": {
       "A": {

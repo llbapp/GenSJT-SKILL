@@ -64,7 +64,7 @@ A=3分：该选项体现了全局视野和主动协调能力，能够在复杂�
 
 ### Step 1：维度标准深度内化 (Target Alignment)
 
-1. **检索**：在 `competence_dictionary.json` 中锁定用户输入的【维度】。若不存在匹配维度，**跳过该维度**，仅处理存在的维度，并在最终输出时告知用户哪些维度被跳过了。如果所有维度都不存在，则停止执行。
+1. **检索**：在 `competence_dictionary.json` 中锁定用户输入的【维度】。若不存在匹配维度，**拒绝为该维度出题**，在最终输出时明确告知用户哪些维度无效及原因。如果所有维度都不存在，则停止执行，不生成任何题目。
 2. **内化**：深度理解该维度的"定义（definition）"、"高分特征（high_score_features）"、"低分特征（low_score_features）"与"行为等级（behavior_levels）"。
 3. **锚定**：将 3 分（最优）选项锁定在"优秀/良好"级行为，将 0 分（最差）选项锁定在"不足"级行为。
 
@@ -206,7 +206,7 @@ python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" query \
    - `competence_sjt`：匹配维度的情境-任务-行为锚点
    - `examples`：匹配维度的例题（每维度最多5道，用于语言风格参考）
    - `parameter_guide`：P/D 参数估算指南全文
-   - `skipped_dimensions`：未在知识库中找到的维度名称列表（可能为空）
+   - `skipped_dimensions`：**无效维度**列表（未在胜任特征辞典中找到）。这些维度**严禁出题**，AI 必须在生成阶段一开头告知用户哪些维度无效并说明原因，仅为有效维度生成题目。
    - `job_context`：**行业岗位匹配结果**（可选，传入 --industry 和 --position 时存在）
      - `industry_match`：行业匹配列表（名称 + 相似度分数）
      - `position_match`：岗位匹配列表（名称 + 相似度分数）
@@ -221,7 +221,15 @@ python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" query \
 
 **AI 命题时必须深度参考 `job_context.results` 中的岗位信息，确保情境真实感、角色边界正确、术语地道。** 不得自行读取原始知识库文件。
 
-#### 阶段三：分批生成逻辑
+#### 阶段三：维度有效性校验（最先执行）
+
+- **检查 `skipped_dimensions`**：若该列表非空，AI 必须**在开始出题前**告知用户：
+  - 哪些维度无效（不在胜任特征辞典中）
+  - 这些维度不会生成任何题目
+- **仅对有效维度（存在于 `dimensions` 字段中的）生成题目**
+- 若所有维度均无效，**停止执行**，不调用 `gen_docs`
+
+#### 阶段四：分批生成逻辑
 
 - 当总题量 > 20题时，必须分批生成，每批不超过 10 题。
 - 每批完成后立即存入 `temp_items.json`，全部批次完成后再统一生成文档。
