@@ -104,7 +104,7 @@ def create_answer_doc(items: list, industry: str, position: str, output_path: st
     """
     生成完整答案卷。
     选项标签与测试卷保持一致（使用 item['test_labels'] 映射），
-    按分值 0→1→2→3 升序排列。
+    按分值 0→1→2 升序排列（2-1-1-0 分制）。
     """
     doc = docx.Document()
 

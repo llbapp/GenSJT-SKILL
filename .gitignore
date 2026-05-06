@@ -1,0 +1,24 @@
+# Dependencies
+__pycache__/
+*.pyc
+
+# macOS metadata
+.DS_Store
+
+# WorkBuddy internal metadata
+_skillhub_meta.json
+
+# Garbled files (legacy zip extraction artifacts)
+references_decoded/鑳滀换鐗瑰緛杈炲吀.md
+
+# Legacy / drafts (already superseded)
+SKILL_v3.md
+
+# One-off tooling (not needed for distribution)
+references_decoded/generate_excel.py
+references_decoded/competence_dimensions.xlsx
+
+# Legacy backups (original sources already in references.gpg)
+references_decoded/例题库.json
+references_decoded/例题库.md
+references_decoded/胜任特征辞典.md

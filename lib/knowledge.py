@@ -188,19 +188,24 @@ def query_refs(dim_names: list) -> dict:
     按维度精准检索所有知识库，返回结构化的参考资料摘要。
     供 AI 命题前定向加载，避免全量读取。
 
+    维度匹配策略：严格精确匹配（不做模糊/别名处理），
+    未在 competence_dictionary.json 中找到的维度直接放入 skipped_dimensions。
+
     返回：
     {
+      "valid_dimensions": [...],          # 严格匹配成功的维度名列表（LLM 仅对这些维度出题）
+      "skipped_dimensions": [...],        # 未在字典中找到的维度名列表（程序已拒绝，LLM 禁止为其出题）
       "dimensions": {dim_name: {"definition": ..., "high_score": ..., ...}},
-      "templates": [{template_id, dimension, item_skeleton, ...}, ...],
-      "competence_sjt": [{dimension, abstract_scenario, ...}, ...],
-      "examples": [{id, dimension, scenario, ...}, ...],
+      "examples": [{id, dimension, scenario, options, option_scores, ...}, ...],  # 核心改编样本
+      "competence_sjt": [{dimension, abstract_scenario, ...}, ...],               # 例题不足时的补充
       "parameter_guide": "...",
-      "skipped_dimensions": [...]
     }
     """
     result = {
-        "dimensions": {}, "templates": [], "competence_sjt": [],
-        "examples": [], "parameter_guide": "", "skipped_dimensions": []
+        "valid_dimensions": [],
+        "skipped_dimensions": [],
+        "dimensions": {}, "examples": [], "competence_sjt": [],
+        "parameter_guide": "",
     }
     found_dims = set()
 
@@ -226,26 +231,10 @@ def query_refs(dim_names: list) -> dict:
     for dim_name in dim_names:
         if dim_name not in found_dims:
             result["skipped_dimensions"].append(dim_name)
+        else:
+            result["valid_dimensions"].append(dim_name)
 
-    # 2. 母题模板
-    templates_path = os.path.join(DECODED_DIR, "extracted_templates.json")
-    if os.path.exists(templates_path):
-        with open(templates_path, "r", encoding="utf-8") as f:
-            all_templates = json.load(f)
-        for t in all_templates:
-            if t.get("dimension") in dim_names:
-                result["templates"].append(t)
-
-    # 3. competence_SJT.json
-    csjt_path = os.path.join(DECODED_DIR, "competence_SJT.json")
-    if os.path.exists(csjt_path):
-        with open(csjt_path, "r", encoding="utf-8") as f:
-            all_csjt = json.load(f)
-        for c in all_csjt:
-            if c.get("dimension") in dim_names:
-                result["competence_sjt"].append(c)
-
-    # 4. 例题库（每维度最多返回5道）
+    # 2. 例题库（每维度最多返回5道）—— 核心改编样本，优先返回
     ex_path = os.path.join(DECODED_DIR, "example_questions.json")
     if os.path.exists(ex_path):
         with open(ex_path, "r", encoding="utf-8") as f:
@@ -254,7 +243,16 @@ def query_refs(dim_names: list) -> dict:
             if group["dimension"] in dim_names:
                 result["examples"].extend(group.get("questions", [])[:5])
 
-    # 5. 参数估算指南（全文，内容不长）
+    # 3. competence_SJT.json —— 例题不足时的补充素材
+    csjt_path = os.path.join(DECODED_DIR, "competence_SJT.json")
+    if os.path.exists(csjt_path):
+        with open(csjt_path, "r", encoding="utf-8") as f:
+            all_csjt = json.load(f)
+        for c in all_csjt:
+            if c.get("dimension") in dim_names:
+                result["competence_sjt"].append(c)
+
+    # 4. 参数估算指南（全文，内容不长）
     param_path = os.path.join(DECODED_DIR, "SJT_parameter_estimation.md")
     if os.path.exists(param_path):
         with open(param_path, "r", encoding="utf-8") as f:

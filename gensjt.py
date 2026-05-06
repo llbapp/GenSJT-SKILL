@@ -169,6 +169,25 @@ if __name__ == "__main__":
             sys.exit(1)
         result = query_refs(dim_names)
 
+        # ── 维度校验报告（输出到 stderr，不污染 JSON stdout）──
+        valid = result.get("valid_dimensions", [])
+        skipped = result.get("skipped_dimensions", [])
+        if skipped:
+            print(
+                f"⚠️  以下 {len(skipped)} 个维度在胜任特征辞典中不存在，程序已拒绝，不会为其出题：\n"
+                + "\n".join(f"  ✗ {d}" for d in skipped),
+                file=sys.stderr
+            )
+        if valid:
+            print(
+                f"✅ 以下 {len(valid)} 个维度验证通过，将为其检索知识库并出题：\n"
+                + "\n".join(f"  ✓ {d}" for d in valid),
+                file=sys.stderr
+            )
+        if not valid:
+            print("❌ 所有维度均无效，知识库无匹配记录，已终止。", file=sys.stderr)
+            sys.exit(2)
+
         # 可选：行业岗位模糊搜索
         industry_query = None
         position_query = None
