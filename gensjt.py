@@ -137,7 +137,7 @@ if __name__ == "__main__":
         print("  gen_docs [--output-dir <路径>] - 从 temp_items.json 生成三份文档")
         sys.exit(1)
 
-    password = sys.argv[1]
+    password = sys.argv[1].strip()
     from crypto import verify_password, decrypt_references
     if not verify_password(password):
         print("密码错误")

@@ -197,16 +197,18 @@ A=2分：该选项体现了全局视野和主动协调能力，能够在复杂�
 
 #### 阶段一：密码验证（最先执行）
 
-1. **立即询问用户密码**，不等待用户提供其他参数。
+1. **以普通文本对话方式向用户索要密码**。⚠️ **严禁使用选项式提问工具（如 AskUserQuestion）收集密码**，必须让用户通过自由文本输入回复。直接用一句话提示即可，例如："请提供 GenSJT 技能的密码以验证权限。"用户会在对话中直接回复密码文本。
 2. 获取密码后，执行验证命令（此时不需要维度参数）：
 
 ```bash
-python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" verify
+D:/miniconda3/python.exe ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" verify
 ```
 
-1. 根据返回结果：
+> **安全提示**：密码仅通过上述命令行参数传递给本地 Python 脚本进行 SHA-256 哈希比对，不会被存储或发送到任何外部服务。
+
+3. 根据返回结果：
    - **验证成功**：告知用户"密码验证通过"，然后进入阶段二收集参数。
-   - **验证失败**：告知用户"密码错误，请重新输入"，重新询问密码。**连续 3 次失败后停止执行。**
+   - **验证失败**：**再次以普通文本对话方式**请用户重新输入密码（同样禁止使用选项式提问）。**连续 3 次失败后停止执行。**
 
 > **密码验证通过后，密码已在内存中保存，后续** **`query`** **和** **`gen_docs`** **命令复用同一密码，无需再次询问。**
 
@@ -217,7 +219,7 @@ python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" verify
 参数收集完成后，执行以下命令（同时完成解密、维度检索和行业岗位模糊搜索）：
 
 ```bash
-python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" query \
+D:/miniconda3/python.exe ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" query \
   --dimensions <维度1>,<维度2>,... \
   --industry <行业> \
   --position <岗位>
@@ -294,13 +296,13 @@ python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" query \
 所有题目生成完毕后，调用（在工作空间目录下执行，文档将输出到该目录）：
 
 ```bash
-cd <工作空间路径> && python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" gen_docs
+cd <工作空间路径> && D:/miniconda3/python.exe ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" gen_docs
 ```
 
 也可显式指定输出目录：
 
 ```bash
-python3 ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" gen_docs --output-dir <路径>
+D:/miniconda3/python.exe ~/.workbuddy/skills/GenSJT.skill/gensjt.py "$PASSWORD" gen_docs --output-dir <路径>
 ```
 
 ## 六、 质量质检清单

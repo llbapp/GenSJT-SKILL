@@ -18,7 +18,8 @@ _PWD_HASH = "21a3f27b0e966371cd2d7c46955fabf29fa6c7fd3f53b0a81a0de00b54e7f735"
 
 
 def verify_password(password: str) -> bool:
-    return hashlib.sha256(password.encode()).hexdigest() == _PWD_HASH
+    cleaned = password.strip()
+    return hashlib.sha256(cleaned.encode()).hexdigest() == _PWD_HASH
 
 
 def _fix_zip_filename(name: str) -> str:
